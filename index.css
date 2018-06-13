@@ -9,10 +9,6 @@ font-weight:bold;
 font-style:normal;
 background:#fff;
 z-index:-1;
-display:flex;
-align-item:center;
-justify-content:center;
-flex-direction:column;
 }
 #header{
 font-size:42px;
@@ -45,8 +41,8 @@ width:auto;
 margin:0px 8px;
 }
 #hahayes{
-top:0;
-margin-bottom:-76px;
+position:absolute;
+padding-top:10px;
 margin-left:8px;
 float:left; 
 }
@@ -98,9 +94,10 @@ color:#5E56F6;
 font-size:40px;
 }
 #hahayes{
-top:0;
-margin-bottom:-70px;
-margin-left:20px;
+position:absolute;
+padding-top:0px;
+margin-left:14px;
+float:left; 
 }
 #menu{
 width:100%;
