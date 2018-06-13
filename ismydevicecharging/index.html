@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>ismydevicecharging</title>
+<meta charset="UTF-8">
+<meta name="description" content="Tells if your device is charging or not">
+<meta name="keywords" content="charging,device charging,device,charge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#e8175d">
+<meta name="msapplication-navbutton-color" content="#e8175d">
+<meta name="apple-mobile-web-app-status-bar-style" content="#e8175d">
+<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+<style>
+body{
+margin:0;
+font-family: 'Montserrat', sans-serif;
+color:#fff;
+width:100%;
+max-width:100%;
+overflow-x:hidden;
+min-height:90vh;
+background:#e8175d;
+font-weight:bold;
+justify-content:center;
+flex-direction:column;
+display:flex;
+}
+#question{
+color:#fff;
+font-size:60px;
+width:78%;
+margin:20px 0px;
+}
+#chargingornot{
+color:#000;
+font-size:40px;
+width:75%;
+margin-bottom:20px;
+}
+#chargelevel{
+color:#000;
+font-size:30px;
+width:75%;
+margin-bottom:20px;
+}
+#isthisnecessary{
+font-size:10px;
+margin-top:50px;
+margin-bottom:20px;
+}
+#isthisnecessary a{
+text-decoration:none;
+color:#000;
+}
+@media (min-width: 600px) {
+body{
+margin:0;
+font-family: 'Montserrat', sans-serif;
+color:#fff;
+width:100%;
+max-width:100%;
+overflow-x:hidden;
+min-height:100vh;
+background:#e8175d;
+font-weight:bold;
+justify-content:center;
+flex-direction:column;
+display:flex;
+}
+#question{
+color:#fff;
+font-size:80px;
+width:78%;
+margin-bottom:20px;
+}
+}
+</style>
+</head>
+<body onload="checkbattery()">
+<script type="text/javascript">
+function checkbattery(){
+function updatethislul(battery) {
+document.getElementById('chargingornot').innerHTML = battery.charging ? 'yes' : 'no';
+if(document.getElementById('chargingornot').innerHTML == "no"){
+document.querySelector('meta[name="theme-color"]').setAttribute("content", "#e8175d");
+document.querySelector('meta[name="msapplication-navbutton-color"]').setAttribute("content", "#e8175d");
+document.querySelector('meta[name="apple-mobile-web-app-status-bar-style"]').setAttribute("content", "#e8175d");
+document.body.style.backgroundColor = "#e8175d";
+}else{
+document.querySelector('meta[name="theme-color"]').setAttribute("content", "#32ff7e");
+document.querySelector('meta[name="msapplication-navbutton-color"]').setAttribute("content", "#32ff7e");
+document.querySelector('meta[name="apple-mobile-web-app-status-bar-style"]').setAttribute("content", "#32ff7e");
+document.body.style.backgroundColor = "#32ff7e";
+}
+document.getElementById('chargelevel').innerHTML = '<p style="color:#fff">battery level</p>'+battery.level*100+"%";
+}
+navigator.getBattery().then(function(battery) {
+updatethislul(battery);
+battery.onchargingchange = function () {
+updatethislul(battery);
+};
+battery.onlevelchange = function () {
+updatethislul(battery);
+};
+});
+}
+</script>
+<center>
+<div id="question">is my device charging</div>
+<div id="chargingornot">your browser does not support battery status thingy :(</div>
+<div id="chargelevel">level comes here</div>
+<div id="isthisnecessary">made by <a href="https://instagram.com/imfunny10" target="_blank">im funny</a> with ♡ and a keyboard</div>
+</center>
+</body>
+</html>
