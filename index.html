@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>im funny</title>
+<meta charset="UTF-8">
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta name="author" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#5E56F6">
+<meta name="msapplication-navbutton-color" content="#5E56F6">
+<meta name="apple-mobile-web-app-status-bar-style" content="#5E56F6">
+<link rel="shortcut icon" type="image/x-icon" href="images/1.png"/>
+<link rel="stylesheet" href="index.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+</head>
+<body>
+<div id="menu">
+<div id="options">
+<p id="close">×</p>
+<p><a href="index.html">home</a></p>
+<p><a href="#">about</a></p>
+</div>
+</div>
+<div id="hahayes">
+<svg width="40" height="40">
+<path d="M0,5 40,5" stroke="#000" stroke-width="5"/>
+<path d="M0,15 30,15" stroke="#000" stroke-width="5"/>
+<path d="M0,25 20,25" stroke="#000" stroke-width="5"/>
+</svg>
+</div>
+<center>
+<div id="header">im funny</div>
+<img src="images/2.png" id="image">
+<div id="content">a</br><b>front-end developer</b></br>who’s comfortable with the</br><b>server-side</b></div>
+<div id="social">
+<a href="https://instagram.com/imfunny10" target="_blank"><img src="https://www.seeklogo.net/wp-content/uploads/2016/05/instagram-icon-logo-vector-download.jpg"></a>
+<a href="https://github.com/imfunniee" target="_blank"><img src="https://assets-cdn.github.com/images/modules/logos_page/GitHub-Mark.png" style="height:32px;width:auto;"></a>
+</div>
+</center>
+<script type="text/javascript">
+document.getElementById("hahayes").addEventListener("click", showMenu);
+document.getElementById("close").addEventListener("click", closeMenu);
+function showMenu(){
+document.getElementById("menu").className += "animated slideInLeft"; 
+document.getElementById("menu").style.display = "flex";
+}
+function closeMenu(){
+document.getElementById("menu").className += "animated slideOutLeft"; 
+var myvar = setInterval(function lul(){
+document.getElementById("menu").style.display = "none";
+clearInterval(myvar);
+},820);
+}
+</script>
+</body>
+</html>
