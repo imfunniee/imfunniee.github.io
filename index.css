@@ -1,6 +1,6 @@
 body{
 margin:0;
-padding:20px 0px;
+padding:10px 0px;
 max-width:100%;
 overflow-x:hidden;
 min-height:100vh;
@@ -34,16 +34,18 @@ background:#000;
 }
 #social{
 margin:20px 0;
+color:#000;
 }
-#social img{
-height:30px;
-width:auto;
-margin:0px 8px;
+.class{
+color:#000;
+font-size:35px;
+margin:0px 20px;
 }
 #hahayes{
 position:absolute;
-padding-top:10px;
-margin-left:8px;
+font-size:24px;
+padding-top:13px;
+margin-left:10px;
 float:left; 
 }
 #menu{
@@ -122,22 +124,23 @@ font-style:normal;
 background:#fff;
 }
 #header{
-font-size:55px;
+font-size:50px;
 margin:20px 0px;
 }
 #content{
 margin:20px 0px;
-font-size:35px;
+font-size:32px;
 width:90%;
 }
 #content b{
 color:#5E56F6;
-font-size:40px;
+font-size:36px;
 }
 #hahayes{
 position:absolute;
-padding-top:0px;
-margin-left:14px;
+padding-top:6px;
+font-size:34px;
+margin-left:16px;
 float:left; 
 }
 #menu{
