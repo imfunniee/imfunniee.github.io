@@ -82,24 +82,20 @@ min-height:100vh;
 font-family:'Montserrat', sans-serif;
 font-weight:bold;
 font-style:normal;
-display:flex;
-align-item:center;
-justify-content:center;
-flex-direction:column;
 background:#fff;
 }
 #header{
-font-size:45px;
-margin:15px 0px;
+font-size:55px;
+margin:20px 0px;
 }
 #content{
-margin:15px 0px;
-font-size:28px;
+margin:20px 0px;
+font-size:35px;
 width:90%;
 }
 #content b{
 color:#5E56F6;
-font-size:34px;
+font-size:40px;
 }
 #hahayes{
 top:0;
