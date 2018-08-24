@@ -1,0 +1,160 @@
+body{
+    margin:0%;
+    padding: 0%;
+    width:100%;
+    /*min-height:100vh;
+    display:flex;
+    justify-content:center;
+    flex-direction:column;
+    background:-webkit-linear-gradient(40deg,#4776e6,#8e54e9);
+    background-size:130% 130%;
+    -webkit-animation: Gradient 100s ease infinite;
+    -moz-animation: Gradient 100s ease infinite;
+    -o-animation: Gradient 100s ease infinite;
+    animation: Gradient 100s ease infinite;*/
+    background:white;
+    color:#282828;
+    max-height: 100vh;
+    max-width: 100vw;
+    overflow: hidden;
+    align-items:center;
+    } 
+    #content{
+    width:90%;
+    height:88vh;
+    margin:6vh 5%;
+    }
+    #header{
+    width:100%;
+    padding:10px 0px;
+    color:#282828;
+    }
+    #logo{
+    font-size:30px;
+    font-family: 'Varela Round', sans-serif;
+    font-weight:bold;
+    }
+    .maps{
+    font-size:22px;
+    font-weight:bold;
+    margin-right:5px;
+    }
+    #header div{
+    display:inline-block;
+    }
+    #links{
+    float:right;
+    font-family: 'Varela Round', sans-serif;
+    font-weight:bold;
+    margin-top:10px;
+    }
+    #links a{
+    margin-left:40px;
+    font-size:18px;
+    text-decoration:none;
+    color:#282828;
+    }
+    #travel{
+    width:100%;
+    height:auto;
+    padding:10px 0px;
+    margin:50px 0px;
+    }
+    .destination{
+    width:30%;
+    height:70vh;
+    max-width:30% !important;
+    max-height:70vh !important;
+    overflow:hidden !important;
+    background:#fff;
+    border-radius:8px;
+    text-align:center;
+    box-shadow:0px 0px 2px #c2bfbf;
+    display:inline-block;
+    margin:0px 20px;
+    transition:0.4s ease-in-out;
+    }
+    .des-image{
+    width:100%;
+    height:45%;
+    max-width:100% !important;
+    max-height:45% !important;
+    overflow:hidden !important;
+    background-size:cover !important;
+    border-radius:8px 8px 0px 0px;
+    background-repeat:no-repeat;
+    transition:0.4s ease-in-out;
+    }
+    .destination:hover .des-image{
+        transform: scale(1.04);
+    }
+    .destination:hover{
+        transform: scale(1.02);
+        box-shadow:0px 10px 30px #807c7c;
+        cursor: pointer;
+    }
+    #title{
+    font-size:40px;
+    font-family: 'Varela Round', sans-serif;
+    font-weight:bold;
+    margin:40px 0px;
+    }
+     *:focus {
+        outline:none;
+        }
+    #weather{
+        font-size:30px;
+        font-family: 'Varela Round', sans-serif;
+        font-weight:bold;
+        margin:40px 0px;
+    }
+    .destination button{
+        font-size:20px;
+        font-family: 'Varela Round', sans-serif;
+        font-weight:bold;
+        background:white;
+        border:0px;
+        color:#282828;
+        padding:12px 40px;
+        border-radius:50px;
+        box-shadow:0px 5px 10px #c2bfbf;
+        transition:0.4s ease-in-out;
+    }
+    .destination button:hover{
+    cursor: pointer;
+    box-shadow:0px 10px 20px #807c7c;
+    }
+    ::selection {
+        color:#fff; 
+        background:#282828;
+        }
+        @-webkit-keyframes Gradient {
+        0% {background-position: 0% 50%}
+        50% {background-position: 100% 50%}
+        100% {background-position: 0% 50%}
+        }
+        @-moz-keyframes Gradient {
+        0% {background-position: 0% 50%}
+        50% {background-position: 100% 50%}
+        100% {background-position: 0% 50%}
+        }
+        @keyframes Gradient {
+        0% {background-position: 0% 50%}
+        50% {background-position: 100% 50%}
+        100% {background-position: 0% 50%}
+        }
+        ::-webkit-scrollbar {
+            width:5px;
+            height:5px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1; 
+            border-radius:5px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #282828; 
+            border-radius:5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555; 
+        }
