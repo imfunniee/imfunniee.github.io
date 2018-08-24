@@ -20,7 +20,7 @@
     align-items:center;
     } 
     #div{
-        width:60vw;
+        width:45vw;
         height:auto;
         padding:3vh 8vw;
         background:white;
@@ -37,7 +37,7 @@
     }
     #div h1 b{
     font-size:60px;
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Poppins', sans-serif;
     background:-webkit-linear-gradient(0deg,#a8ff78,#78ffd6,#a8ff78);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;

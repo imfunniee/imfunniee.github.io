@@ -42,9 +42,12 @@ break;
 setTimeout(function(){
 document.getElementById("time").innerHTML = month + " " + currentdate.getDate() + ", " + currentdate.getFullYear() + " " + currentdate.getHours() + ":" + currentdate.getMinutes();
 },100);
+
 setInterval(function(){
+var currentdate = new Date();
 document.getElementById("time").innerHTML = month + " " + currentdate.getDate() + ", " + currentdate.getFullYear()+ " "  + currentdate.getHours() + ":" + currentdate.getMinutes();
-},60000);
+},10000);
+
 function showform(){
 $("#add").attr("onclick","hideform()");
 document.getElementById("form").className = "animated fadeIn";
