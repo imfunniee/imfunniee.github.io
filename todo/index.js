@@ -89,6 +89,10 @@ data.push(oldData[i]);
 }
 }
 localStorage.setItem("todo", JSON.stringify(data));
+document.getElementById("form").className = "animated fadeOut";
+setTimeout(function(){
+document.getElementById("form").style.display = "none";
+},600);
 showdata();
 }
 }
@@ -116,7 +120,7 @@ function remove(idnumber){
            document.getElementById(idnumber).innerHTML = "<br><h2>removed!!</h2>";
            setTimeout(function(){
            showdata();
-           },800);
+           },1000);
          break;
        }
     }
