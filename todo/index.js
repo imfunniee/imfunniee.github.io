@@ -89,7 +89,7 @@ data.push(oldData[i]);
 }
 }
 localStorage.setItem("todo", JSON.stringify(data));
-location.reload();
+showdata();
 }
 }
 
@@ -114,6 +114,9 @@ function remove(idnumber){
          item.splice(i,1);
            document.getElementById(idnumber).className += " animated rubberBand";
            document.getElementById(idnumber).innerHTML = "<br><h2>removed!!</h2>";
+           setTimeout(function(){
+           document.getElementById("idnumber").style.display = "none";
+           },800);
          break;
        }
     }
