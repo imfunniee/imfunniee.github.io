@@ -116,7 +116,7 @@ function remove(idnumber){
     for(var i = 0; i < item.length; i++) {
        if(item[i].id == idnumber){
          item.splice(i,1);
-           document.getElementById(idnumber).className += " animated rubberBand";
+           document.getElementById(idnumber).className += " animated pulse";
            document.getElementById(idnumber).innerHTML = "<br><h2>removed!!</h2>";
            setTimeout(function(){
            showdata();
