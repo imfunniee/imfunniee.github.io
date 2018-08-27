@@ -115,7 +115,7 @@ function remove(idnumber){
            document.getElementById(idnumber).className += " animated rubberBand";
            document.getElementById(idnumber).innerHTML = "<br><h2>removed!!</h2>";
            setTimeout(function(){
-           document.getElementById("idnumber").style.display = "none";
+           showdata();
            },800);
          break;
        }
