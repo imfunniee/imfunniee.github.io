@@ -120,7 +120,7 @@ function remove(idnumber){
            document.getElementById(idnumber).innerHTML = "<br><h2>removed!!</h2>";
            setTimeout(function(){
            showdata();
-           },1000);
+           },1500);
          break;
        }
     }
