@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>meteo.</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="weather">
+    <meta name="keywords" content="weather">
+    <meta name="author" content="imfunny">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Vibur" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="icons/weather-icons.min.css">
+    <link rel="stylesheet" href="icons/weather-icons-wind.min.css">
+    <script type="text/javascript" src="city.json"></script>
+    <script src="index.js" type="text/javascript"></script>
+  </head>
+  <body onload="displayWh()">
+    <div id="loading">
+      <div id="spinner"></div>
+    </div>
+    <div id="back">
+      <div id="front">
+        <div id="front-head">
+          <h1>search for a city</h1>
+          <i class="fas fa-times i-tag" onclick="hideSearch();"></i>
+        </div>
+        <input type="text" placeholder="search" id="search" onkeypress="search()">
+        <center>
+          <div id="results">
+          </div>
+        </center>
+      </div>
+    </div>
+    <div id="header">
+      <div id="logo" class="logo-animation">meteo.</div>
+      <div id="links">
+        <a onclick="showSearch();"><i class="fas fa-search search-logo"></i> &nbsp; </a>
+      </div>
+    </div>
+    <div id="content">
+      <div id="realWeather" style="display:none" class="wh-animation">
+        <div id="data">
+          <div id="data1">
+            <h1 style="margin-left:20px;" id="wh-date">...</h1>
+            <div id="astronomy">...</div>
+            <div id="atmosphere">...</div>
+            <div id="wind">...</div>
+          </div>
+          <div id="data2">
+            <div id="statusLogo"></div>
+            <div id="status">...</div>
+            <div id="location">...</div>
+            <div id="min-max">...</div>
+          </div>
+        </div>
+        <div id="forecast">
+          <h2 style="margin-left:8%;">forecast</h2>
+          <br>
+          <center>
+            <div id="cards">
+              ...
+            </div>
+          </center>
+        </div>
+      </div>
+      <center>
+        <div id="error1" style="">
+          <div id="emoji">☝️</div>
+          <p>search for a city by clicking on that search thingy</p>
+        </div>
+        <div id="error2" style="display:none";>
+          <p>oopsie!! no data to show ;(</p>
+        </div>
+      </center>
+    </div>
+    <script type="text/javascript">
+      function displayWh(){
+      setTimeout(function(){
+      var hash = window.location.hash.substring(1);
+      if(!hash){
+      document.getElementById("error1").style.display = "inherit";
+      document.getElementById("realWeather").style.display = "none";
+      document.getElementById("error2").style.display = "none";
+      }
+      else{
+      console.log('%cfollow me on ig : @imfunny10 ', 'font-size:40px;color:#bada55');
+      $.getJSON("https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20weather.forecast%20where%20woeid%20in%20(select%20woeid%20from%20geo.places(1)%20where%20text%3D%22"+hash+"%22)&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys", function(data){
+      if(!data || data.query.results == null){
+        document.getElementById("error2").style.display = "inherit";
+        document.getElementById("error1").style.display = "none";
+        document.getElementById("realWeather").style.display = "none";
+      }
+      else{
+        document.getElementById("error2").style.display = "none";
+        document.getElementById("error1").style.display = "none";
+        document.getElementById("realWeather").style.display = "";
+        $("#logo").removeClass("logo-animation");
+        $("#realWeather").removeClass("wh-animation");
+        setTimeout(function(){
+        $("#logo").addClass("logo-animation");
+        $("#realWeather").addClass("wh-animation");
+        },120);
+      $("#wh-date").html(data.query.results.channel.lastBuildDate);
+      $("#astronomy").html('<i class="wi wi-sunrise" id="sun"></i> '+data.query.results.channel.astronomy.sunrise+' <i class="wi wi-sunset" id="sun"></i> '+data.query.results.channel.astronomy.sunset+'<br><br>');
+      $("#atmosphere").html('<h2 style="margin-left:20px;">atmosphere</h2> <i class="wi wi-humidity" id="sun"></i>'+data.query.results.channel.atmosphere.humidity+'% <i class="wi wi-thermometer" id="sun"></i>'+data.query.results.channel.atmosphere.pressure+' in <i class="wi wi-smog" id="sun"></i>'+data.query.results.channel.atmosphere.visibility+' mi <br><br>');
+      $("#wind").html('<h2 style="margin-left:20px;">wind</h2><span id="c">'+data.query.results.channel.wind.chill+'&#176;f</span><i class="wi wi-wind towards-'+data.query.results.channel.wind.direction+'-deg" id="sun"></i>'+data.query.results.channel.wind.direction+'&#176; <i class="wi wi-windy" id="sun"></i>'+data.query.results.channel.wind.speed+' mph');
+      $('#statusLogo').html('<i class="wi '+convertCode(data.query.results.channel.item.condition.code)+'" id="cloud"></i>');
+      $('#status').html(data.query.results.channel.item.condition.text);
+      $('#location').html('<h2><i class="fas fa-map-marker-alt"></i> &nbsp;'+data.query.results.channel.location.city+','+data.query.results.channel.location.region+', '+data.query.results.channel.location.country+'</h2>');
+      $("#min-max").html('<h2><i class="wi wi-direction-up" id="sun"></i> '+data.query.results.channel.item.forecast[0].high+'&#176;f &nbsp; <i class="wi wi-direction-down" id="sun"></i> '+data.query.results.channel.item.forecast[0].low+'&#176;f</h2>');
+      var html = "";
+      for(var i = 1; i < 7; i++){
+      var code = data.query.results.channel.item.forecast[i].code;
+      html += '<div class="card"><div class="card-div">'+data.query.results.channel.item.forecast[i].day+'</div><i class="wi '+convertCode(code)+'" id="cast"></i><br><div>'+data.query.results.channel.item.forecast[i].high+'&#176;f</div></div>';
+      }
+      $("#cards").html(html);
+      }
+      });
+      }
+      hideSearch();
+      },120);
+      }
+        function search(){
+        var city = $('#search').val();
+        document.getElementById("results").innerHTML = "";
+        if(city.length >= 3){
+        var x = 0.4;
+        $.each(cities, function(i, v){
+        if(v.name.search(new RegExp(city, "i")) != -1){
+        document.getElementById("results").innerHTML += '<a href="index.html#'+v.name+'" onclick="displayWh();"><div class="animated slideInLeft" style="-webkit-animation-delay: '+x+'s;">'+v.name+', '+v.country+'</div></a>';
+        x += 0.1;
+        return;
+        }
+        });
+        }
+        }
+    </script>
+  </body>
+</html>
