@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <link rel="stylesheet" href="index.css">
 </head>
-<body>
+<body id="body">
     <div id="header">
         <center>
         <b id="social">social.</b>
@@ -27,6 +27,7 @@
     </div>
     <div id="background"></div>
     <div id="scroll-to"></div>
+    <div id="bottom"></div>
     <div id="profile">
         <div id="profile-image"></div>
         <div id="userdata">
@@ -107,22 +108,13 @@ hH = $('#scroll-to').outerHeight(),
 wH = $(window).height(),
 wS = $(this).scrollTop();
 if (wS > (hT+hH-wH) && (hT < wS) && (wS+wH > hT+hH)){
-$("#header").css("background","#fff");
-$("#header").css("color","#282828");
+$("#header").css("background","#000");
 $("#header").css("padding","2% 5%");
-$("#search-input").css("border","3px solid #282828");
-$("#social").css("border","3px solid #282828");
-$('#search-input').addClass('placeB');
+$("#header").css("box-shadow","0px 10px 30px rgba(0,0,0,0.6)");
 }else{
 $("#header").css("background","transparent");
-$("#header").css("color","#fff");
 $("#header").css("padding","5%");
-$("#search-input").css("border","3px solid #fff");
-$("#social").css("border","3px solid #fff");
-$('#search-input').removeClass('placeB');
-setTimeout(function(){
-$('#search-input').addClass('placeW');
-},100);
+$("#header").css("box-shadow","0px 0px 0px rgba(0,0,0,0)");
 }
 });
 </script>
