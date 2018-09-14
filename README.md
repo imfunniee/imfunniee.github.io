@@ -1,2 +1,2 @@
 # imfunniee.github.io
-portfolio websites and projects
+portfolio website and projects
