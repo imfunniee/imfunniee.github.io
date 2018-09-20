@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="icons/weather-icons-wind.min.css">
     <script type="text/javascript" src="city.json"></script>
     <script src="index.js" type="text/javascript"></script>
+    <script src="gest.js" type="text/javascript"></script>
   </head>
   <body onload="displayWh()">
     <div id="loading">
@@ -25,6 +26,7 @@
     </div>
     <div id="back">
       <div id="front">
+        <div id="search_thingy">
         <div id="front-head">
           <h1>search for a city</h1>
           <i class="fas fa-times i-tag" onclick="hideSearch();"></i>
@@ -35,10 +37,13 @@
           </div>
         </center>
       </div>
+      </div>
     </div>
     <div id="header">
       <div id="logo" class="logo-animation">meteo.</div>
       <div id="links">
+        <a onclick="gest.start();hideThis();" id="sta">gesture control <i class="far fa-hand-paper"></i></a>
+        <a onclick="gest.stop();unhideThis();" id="st" style="display:none">stop gesture control <i class="far fa-hand-paper"></i></a>
         <a onclick="showSearch();"><i class="fas fa-search search-logo"></i> &nbsp; </a>
       </div>
     </div>
@@ -96,15 +101,15 @@
         document.getElementById("realWeather").style.display = "none";
       }
       else{
-        document.getElementById("error2").style.display = "none";
-        document.getElementById("error1").style.display = "none";
-        document.getElementById("realWeather").style.display = "";
-        $("#logo").removeClass("logo-animation");
-        $("#realWeather").removeClass("wh-animation");
-        setTimeout(function(){
-        $("#logo").addClass("logo-animation");
-        $("#realWeather").addClass("wh-animation");
-        },120);
+      document.getElementById("error2").style.display = "none";
+      document.getElementById("error1").style.display = "none";
+      document.getElementById("realWeather").style.display = "";
+      $("#logo").removeClass("logo-animation");
+      $("#realWeather").removeClass("wh-animation");
+      setTimeout(function(){
+      $("#logo").addClass("logo-animation");
+      $("#realWeather").addClass("wh-animation");
+      },120);
       $("#wh-date").html(data.query.results.channel.lastBuildDate);
       $("#astronomy").html('<i class="wi wi-sunrise" id="sun"></i> '+data.query.results.channel.astronomy.sunrise+' <i class="wi wi-sunset" id="sun"></i> '+data.query.results.channel.astronomy.sunset+'<br><br>');
       $("#atmosphere").html('<h2 style="margin-left:20px;">atmosphere</h2> <i class="wi wi-humidity" id="sun"></i>'+data.query.results.channel.atmosphere.humidity+'% <i class="wi wi-thermometer" id="sun"></i>'+data.query.results.channel.atmosphere.pressure+' in <i class="wi wi-smog" id="sun"></i>'+data.query.results.channel.atmosphere.visibility+' mi <br><br>');
@@ -125,20 +130,29 @@
       hideSearch();
       },120);
       }
-        function search(){
-        var city = $('#search').val();
-        document.getElementById("results").innerHTML = "";
-        if(city.length >= 3){
-        var x = 0.4;
-        $.each(cities, function(i, v){
-        if(v.name.search(new RegExp(city, "i")) != -1){
-        document.getElementById("results").innerHTML += '<a href="index.html#'+v.name+'" onclick="displayWh();"><div class="animated slideInLeft" style="-webkit-animation-delay: '+x+'s;">'+v.name+', '+v.country+'</div></a>';
-        x += 0.1;
-        return;
-        }
-        });
-        }
-        }
+      function search(){
+      var city = $('#search').val();
+      document.getElementById("results").innerHTML = "";
+      if(city.length >= 3){
+      var x = 0.4;
+      $.each(cities, function(i, v){
+      if(v.name.search(new RegExp(city, "i")) != -1){
+      document.getElementById("results").innerHTML += '<a href="index.html#'+v.name+'" onclick="displayWh();"><div class="animated slideInLeft" style="-webkit-animation-delay: '+x+'s;">'+v.name+', '+v.country+'</div></a>';
+      x += 0.1;
+      return;
+      }
+      });
+      }
+      }
+      gest.options.subscribeWithCallback(function(gesture) {
+      if(gesture.direction){
+      if(gesture.direction == "Left"){
+        showSearch();
+      }
+      else if(gesture.direction == "Right"){
+        hideSearch();
+      }
+      }else{alert(gesture.error.message)}});
     </script>
   </body>
 </html>

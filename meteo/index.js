@@ -23,6 +23,17 @@ document.getElementById("back").className = "";
 document.getElementById("search").value = "";
 document.getElementById("results").innerHTML = "";
 }
+function hideThis(){
+alert("first allow camera \nthen move your hand left to show search box and right to hide it.\nnote : your hand should be infront of the camera (15 or 20 cm)");
+document.getElementById("sta").style.display = "none";
+document.getElementById("st").style.display = "inline-block";
+document.getElementById("st").className = "animated fadeIn";
+}
+function unhideThis(){
+document.getElementById("st").style.display = "none";
+document.getElementById("sta").style.display = "inline-block";
+document.getElementById("sta").className = "animated fadeIn";
+}
 function convertCode(text){
 switch(text){
 case "32":
