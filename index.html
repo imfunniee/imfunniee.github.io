@@ -5,6 +5,8 @@
          <title>imfunny</title>
          <meta name="Description" content="hi imfunny, a Junior front-end developer who’s comfortable with the server-side.">
          <meta name="Keywords" content="front-end developer , web developer ,junior web developer">
+         <meta name="robots" content="index, nofollow">
+         <meta name="language" content="english">
          <meta name="twitter:card" content="summary">
          <meta name="twitter:url" content="https://imfunniee.github.io">
          <meta name="twitter:title" content="imfunny">
@@ -12,15 +14,15 @@
          <meta name="viewport" content="width=device-width, initial-scale=1.0">
          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
          <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="          crossorigin="anonymous"></script>
-         <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js"integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe" crossorigin="anonymous"></script>
+         <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js"          integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe" crossorigin="anonymous"></script>
          <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
          <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
          <link rel="stylesheet" href="main.css">
 </head>
   <body>
-   <div id="center-div" class="animated zoomIn" style="-webkit-animation-delay:0.2s;animation-delay:0.2s;">
+   <div id="center-div" class="animated zoomIn" style="-webkit-animation-delay:0.3s;animation-delay:0.3s;">
     <div id="inner-div">
-      <div id="header"  class="animated rollIn" style="-webkit-animation-delay:1.5s;animation-delay:1.5s;">
+      <div id="header"  class="animated rollIn" style="-webkit-animation-delay:1s;animation-delay:1s;">
           <div id="header-links">
             <a href="#projects">projects</a>
             <a href="#about">skills</a>
@@ -28,19 +30,24 @@
           </div>
       </div>
       <div id="what-dude"><center><div id="typehere"></div></center></div>
-      <div id="what-second-div" class="animated rollIn" style="-webkit-animation-delay:1.5s;animation-delay:1.5s;">
+      <div id="what-second-div" class="animated zoomIn" style="-webkit-animation-delay:1s;animation-delay:1s;">
         <a href="https://www.youtube.com/channel/UCQW3CrWkkYdRl8UZw75MPIg" target="_blank"><i class="fab fa-youtube what-second-div"></i></a>
         <a href="https://www.instagram.com/imfunny10/" target="_blank"><i class="fab fa-instagram what-second-div"></i></a>
        <a href="https://github.com/imfunniee" target="_blank"><i class="fab fa-github what-second-div"></i></a>
       </div>
     </div>
     <div id="projects">
-      <p>projects</p>
+      <p data-aos="fade-up">projects</p>
       <center>
       <div class="project-content">
         <div id="p-name">meteo.</div>
         <div id="p-desc">a simple weather web-app, build using yahoo's weather api</div>
         <a href="https://imfunniee.github.io/meteo/" target="_blank"><button>visit <i class="fas fa-long-arrow-alt-right right-arrow"></i></button></a>
+      </div>
+      <div class="project-content">
+        <img src="yt.png" width="80%" height="auto">
+        <div id="p-name">youtube redesign concept</div>
+        <div id="p-desc">i tried... :)</div>
       </div>
       <div class="project-content">
           <div id="p-name">todo list</div>
@@ -97,6 +104,7 @@
    });
 
   $(document).ready(function(){
+    AOS.init();
   $("a").on('click', function(event) {
     if (this.hash !== "") {
       event.preventDefault();
