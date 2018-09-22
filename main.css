@@ -6,7 +6,7 @@ min-height:100vh;
 display:flex;
 justify-content:center;
 flex-direction:column;
-background:-webkit-linear-gradient(0deg,#f857a6,#ff5858,#e8175d);
+background-image: linear-gradient(-20deg, #b721ff 0%, #21d4fd 100%);
 background-size:500% 500%;
 -webkit-animation: Gradient 100s ease infinite;
 -moz-animation: Gradient 100s ease infinite;
@@ -109,7 +109,7 @@ font-weight:bold;
 }
 #about p{
 font-size:50px;
-background:-webkit-linear-gradient(0deg,#f857a6,#ff5858,#e8175d);
+background-image: linear-gradient(-20deg, #b721ff 0%, #21d4fd 100%);
 -webkit-background-clip:text;
 background-clip:text;
 -webkit-text-fill-color: transparent;
@@ -124,7 +124,7 @@ font-weight:bold;
 font-size:50px;
 margin-top:5%;
 padding-left:4%;
-background:-webkit-linear-gradient(0deg,#f857a6,#ff5858,#e8175d);
+background-image: linear-gradient(-20deg, #b721ff 0%, #21d4fd 100%);
 -webkit-background-clip:text;
 background-clip:text;
 -webkit-text-fill-color: transparent;
@@ -138,7 +138,7 @@ animation: Gradient 100s ease infinite;
 font-size:24px;
 }
 #typehere span{
-background:-webkit-linear-gradient(0deg,#f857a6,#ff5858,#e8175d);
+background-image: linear-gradient(-20deg, #b721ff 0%, #21d4fd 100%);
 -webkit-background-clip:text;
 background-clip:text;
 -webkit-text-fill-color: transparent;
@@ -149,7 +149,7 @@ background-size:500% 500% !important;
 animation: Gradient 100s ease infinite;
 }
 #about span{
-background:-webkit-linear-gradient(0deg,#f857a6,#ff5858,#e8175d);
+background-image: linear-gradient(-20deg, #b721ff 0%, #21d4fd 100%);
 -webkit-background-clip:text;
 background-clip:text;
 -webkit-text-fill-color: transparent;
@@ -174,7 +174,7 @@ font-weight:bold;
 .project-content #p-name{
 font-size:60px;
 margin:20px 0px;
-background:-webkit-linear-gradient(0deg,#f857a6,#ff5858,#e8175d);
+background-image: linear-gradient(-20deg, #b721ff 0%, #21d4fd 100%);
 -webkit-background-clip:text;
 background-clip:text;
 -webkit-text-fill-color: transparent;
@@ -200,7 +200,7 @@ color:#282828;
 font-size:20px;
 font-weight:bold;
 transition:0.4s ease-in-out;
-box-shadow:0px 8px 15px #949191;
+box-shadow:0px 8px 10px #949191;
 border:0px;
 }
 .project-content button:hover{
