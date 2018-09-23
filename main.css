@@ -20,8 +20,8 @@ overflow: hidden;
 align-items:center;
 }
 #center-div{
-width:90vw;
-height:88vh;
+width:95vw;
+height:90vh;
 background:rgba(255,255,255);
 border-radius:8px;
 z-index:1;
@@ -172,7 +172,7 @@ padding:20px 0px;
 font-weight:bold;
 }
 .project-content #p-name{
-font-size:60px;
+font-size:40px;
 margin:20px 0px;
 background-image: linear-gradient(-20deg, #b721ff 0%, #21d4fd 100%);
 -webkit-background-clip:text;
@@ -193,14 +193,15 @@ color:#282828;
 }
 .project-content button{
 background:transparent;
-padding:8px 60px;
+padding:10px 60px;
 border-radius:50px;
 font-family: 'Varela Round', sans-serif;
 color:#282828;
 font-size:20px;
 font-weight:bold;
 transition:0.4s ease-in-out;
-box-shadow:0px 8px 10px #949191;
+margin:10px 0px;
+box-shadow:0px 5px 10px #949191;
 border:0px;
 }
 .project-content button:hover{
@@ -211,13 +212,29 @@ cursor: pointer;
 font-size:18px;
 margin-left:2px;
 }
+.idk{
+font-size:20px;
+margin-left:0px;
+margin-right:30px;
+background:white;
+padding:0;
+border-radius:50%;
+border:15px solid white;
+transition:0.4s ease-in-out;
+}
+.idk:hover{
+box-shadow:0px 10px 20px #949191;
+cursor:pointer;
+}
 @media (max-width: 600px) {
 #center-div{
 width:100vw;
-height:100vh;
+height:100vh !important;
 background:#fff;
-border-radius:5px;
+border-radius:0px;
 z-index:1;
+max-height:100vh;
+overflow-y:scroll;
 }
 #inner-div{
 padding:3vh 6vw;
@@ -235,26 +252,26 @@ padding:0px 5px;
 }
 #what-dude{
 width:95%;
-height:35vh;
+height:42vh;
 background:white;
 margin-top:22vh;
 display:flex;
 justify-content:center;
 flex-direction:column;
-text-align:left;
+text-align:center;
 padding:5% 0%;
-font-size:40px;
+font-size:36px;
 font-weight:bold;
 transition:0.4s ease-in-out;
 }
 #what-dude div{
 width:90%;
-text-align:left;
+text-align:center;
 }
 .what-second-div{
-font-size:25px;
+font-size:20px;
 margin-right:20px;
-margin-left:10px;
+margin-left:20px;
 background:white;
 padding:0;
 border-radius:50%;
@@ -264,6 +281,62 @@ margin-top:14vh;
 }
 #what-second-div{
 text-align:center;
+}
+#projects{
+width:96%;
+height:auto;
+background:white;
+padding:4% 2%;
+}
+.project-content{
+width:94%;
+text-align:left;
+padding:3%;
+font-weight:bold;
+}
+.project-content #p-name{
+font-size:36px;
+margin:20px 0px;
+background-image: linear-gradient(-20deg, #b721ff 0%, #21d4fd 100%);
+-webkit-background-clip:text;
+background-clip:text;
+-webkit-text-fill-color: transparent;
+background-size:500% 500% !important;
+-webkit-animation: Gradient 100s ease infinite;
+-moz-animation: Gradient 100s ease infinite;
+-o-animation: Gradient 100s ease infinite;
+animation: Gradient 100s ease infinite;
+}
+#p-desc{
+margin:30px 0px;
+font-size:20px;
+}
+h3 a{
+color:#282828;
+}
+.project-content button{
+background:transparent;
+padding:10px 60px;
+border-radius:50px;
+font-family: 'Varela Round', sans-serif;
+color:#282828;
+font-size:16px;
+font-weight:bold;
+transition:0.4s ease-in-out;
+margin:10px 0px;
+box-shadow:0px 5px 10px #949191;
+border:0px;
+}
+.project-content button:hover{
+box-shadow:0px 15px 30px #535353;
+cursor: pointer;
+}
+.right-arrow{
+font-size:18px;
+margin-left:2px;
+}
+#about-sub{
+font-size:20px;
 }
 }
 ::selection {
