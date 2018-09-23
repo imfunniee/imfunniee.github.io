@@ -20,7 +20,7 @@
     align-items:center;
     } 
     #div{
-        width:45vw;
+        width:60vw;
         height:auto;
         padding:3vh 8vw;
         background:white;
@@ -28,10 +28,10 @@
         max-height:80vh;
         border-radius:8px;
         text-align:left;
-        overflow-y:scroll;
+        overflow-y:auto;
     }
     #div h1{
-    width:600px;
+    width:60%;
     padding:5px 20px;
     margin:20px 0px;
     }
@@ -40,6 +40,7 @@
     font-family: 'Poppins', sans-serif;
     background:-webkit-linear-gradient(0deg,#a8ff78,#78ffd6,#a8ff78);
     -webkit-background-clip: text;
+    background-clip:text;
     -webkit-text-fill-color: transparent;
     background-size:500% 500%;
     -webkit-animation: Gradient 100s ease infinite;
@@ -174,4 +175,43 @@
         }
         ::-webkit-scrollbar-thumb:hover {
             background: #555; 
+        }
+
+        @media (max-width:700px){
+            #div{
+                width:84vw;
+                height:auto;
+                padding:3vh 8vw;
+                background:white;
+                text-align:center;
+                max-height:100vh;
+                border-radius:0px;
+                text-align:left;
+                overflow-y:scroll;
+            }
+            #div h1{
+                width:90%;
+                padding:5px 20px;
+                margin:20px 0px;
+                }
+                #time {
+                    width:90%;
+                    display:block;
+                    margin:40px 0px;
+                }
+                #add{
+                    display:block;
+                    margin:40px 0px;
+                    margin-left:40%;
+                }
+                #form {
+                    padding:0;
+                    padding-left:-20px;
+                }
+                #form input {
+                    width:90%;
+                }
+                #list {
+                    width:96%;
+                }
         }
