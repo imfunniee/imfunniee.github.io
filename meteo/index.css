@@ -409,3 +409,71 @@ body {
  ::-webkit-scrollbar-thumb:hover {
 	background: #555;
 }
+
+@media (max-width : 600px){
+#logo{
+font-size:30px;
+}
+#links {
+	top:8px;
+}
+#links a {
+	margin-left: 20px;
+	font-size: 18px;
+}
+#sta {
+	display:none;
+}
+#header {
+	padding:8% 5%;
+}
+#emoji {
+	margin-top:-18%;
+}
+#error1 p {
+	font-size:40px;
+}
+#error2 p {
+	font-size:40px;
+}
+#front {
+	width:70vw;
+}
+.i-tag {
+	margin-left:0;
+	margin-bottom:5%;
+}
+#data {
+	width:90%;
+	text-align:center;
+}
+#data2 {
+	float:left;
+	text-align:left;
+	margin-left:7%;
+	margin-right:0;
+}
+#forecast {
+	height:auto;
+}
+.card {
+	width: 40%;
+	height: 18vh;
+	background: white;
+	margin:15px;
+	display: inline-block;
+	font-family: 'Varela Round', sans-serif;
+	font-weight: bold;
+	color: #282828;
+	font-size: 20px;
+	padding: 20px 0px;
+	padding-top: 30px;
+	border-radius: 10px;
+	transition: 0.4s ease-in-out;
+}
+#cast {
+	font-size: 40px !important;
+	padding: 30px 0px;
+	padding-bottom: 20px;
+}
+}
