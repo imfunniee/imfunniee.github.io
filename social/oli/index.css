@@ -7,22 +7,22 @@ body,html{
 #header {
     width:80%;
     padding:4% 10%;
+    text-align:center;
 }
 #header div{
-    display:inline-block;
+    display:block;
 }
 #title {
-    font-size:30px;
+    font-size:40px;
     font-family: 'Comfortaa', cursive;
     color:#7A68FB;
     margin:0px 20px;
 }
 #links {
-    float:right;
-    margin:15px 0px;
+    margin:20px 0px;
 }
 #links a{
-    margin:0px 20px;
+    margin:0px;
     color:#282828;
     text-decoration:none;
     transition:0.4s ease-in-out;
@@ -32,7 +32,7 @@ body,html{
 }
 #middle {
     width:80%;
-    height:75vh;
+    height:65vh;
     border-radius:5px;
     background:linear-gradient(0deg,rgba(122, 104, 251,0.6),rgba(122, 104, 251,0.6)),url("https://images.pexels.com/photos/115655/pexels-photo-115655.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260") center center fixed;
     background-size:cover;
@@ -96,11 +96,10 @@ body,html{
         font-size:30px;
         font-family: 'Comfortaa', cursive;
         color:#7A68FB;
-        margin:0px 10px;
+        margin:0px;
     }
     #links {
-        float:right;
-        margin:10px 0px;
+        margin:20px 0px;
     }
     #middle {
         width:100%;
