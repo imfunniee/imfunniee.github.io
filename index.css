@@ -1,0 +1,295 @@
+body,html{
+    padding:0px;
+    margin:0px;
+    font-family: 'Comfortaa', cursive;
+    font-weight:bold;
+    background:url("https://images.pexels.com/photos/262738/pexels-photo-262738.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260") center center fixed;
+    }
+#header {
+    width:80%;
+    padding:4% 10%;
+    text-align:center;
+}
+#header div{
+    display:block;
+}
+#title {
+    font-size:40px;
+    font-family: 'Poppins', sans-serif;
+    color:#fff;
+    margin:0px 20px;
+}
+#links {
+    margin:20px 0px;
+}
+#links a{
+    margin:0px;
+    color:#fff;
+    text-decoration:none;
+    transition:0.4s ease-in-out;
+    padding:8px 10px;
+    border-bottom:2px solid transparent;
+}
+#links a:hover{
+    border-bottom:2px solid #fff;
+}
+#wtf {
+    margin:0px 6vw !important;
+}
+#middle {
+    width:100%;
+    height:100vh;
+    border-radius:0px;
+    background:linear-gradient(-225deg, rgba(56, 141, 250, 0.8) 0%, rgba(159, 89, 242,0.8) 29%, rgba(245, 47, 98,0.8) 67%, rgba(245, 194, 47,0.8) 100%);
+    color:white;
+    display:flex;
+    justify-content:center;
+    flex-direction:column;
+    transition:0.4s ease-in-out;
+    background-size:500% 500% !important;
+    -webkit-animation: Gradient 100s ease infinite;
+    -moz-animation: Gradient 100s ease infinite;
+    -o-animation: Gradient 100s ease infinite;
+    animation: Gradient 100s ease infinite;
+}
+#tagline {
+    font-size:50px;
+    width:60%;
+    margin-top:10vh;
+}
+#tagline button{
+    color:white;
+    padding:10px 40px;
+    border-radius:50px;
+    border:2px solid #fff;
+    font-size:18px;
+    font-family: 'Comfortaa', cursive;
+    font-weight:bold;
+    background:transparent;
+    transition:0.4s ease-in-out;
+    margin:8vh 0px;
+}
+#tagline button:hover{
+    transform:scale(1.2);
+    cursor:pointer;
+}
+#portfolio {
+    background:white;
+    width:80%;
+    padding:4% 10%;
+    min-height:40vh;
+}
+#portfolio div {
+    font-size:20px;
+}
+#about,#work,#contact {
+    margin:10vh 0px;
+}
+#portfolio div p{
+    font-size:50px;
+    background-image:linear-gradient(-225deg, rgb(56, 141, 250) 0%, rgb(159, 89, 242) 29%, rgb(245, 47, 98) 67%, rgb(245, 194, 47) 100%);
+    -webkit-background-clip:text;
+    background-clip:text;
+    -webkit-text-fill-color: transparent;
+    background-size:500% 500% !important;
+    -webkit-animation: Gradient 100s ease infinite;
+    -moz-animation: Gradient 100s ease infinite;
+    -o-animation: Gradient 100s ease infinite;
+    animation: Gradient 100s ease infinite;
+    font-family: 'Comfortaa', cursive;
+}
+#skillset {
+     display:inline-block;
+     width:18%;
+}
+#outer1 {
+    width:100px;
+    height:100px;
+}
+#outer1 > svg {
+    width: 100%;
+    display: block;
+}
+#outer2 {
+    width:100px;
+    height:100px;
+}
+#outer2 > svg {
+    width: 100%;
+    display: block;
+}
+#outer3 {
+    width:100px;
+    height:100px;
+}
+#outer3 > svg {
+    width: 100%;
+    display: block;
+}
+#outer4 {
+    width:100px;
+    height:100px;
+}
+#outer4 > svg {
+    width: 100%;
+    display: block;
+}
+#outer5 {
+    width:100px;
+    height:100px;
+}
+#outer5 > svg {
+    width: 100%;
+    display: block;
+}
+#work {
+    column-count:2;
+    column-gap:1%;
+}
+.project {
+    width:80%;
+    height:auto;
+    border-radius:8px;
+    margin:4vh 3%;
+    display:inline-block;
+    padding:4vh 2vw;
+    color:#282828;
+    border-radius:8px;
+    box-shadow:0px 3px 8px #d5d5d5;
+    transition:0.4s ease-in-out;
+    word-wrap: break-word;
+}
+.project:hover {
+    transform:scale(1.06);
+}
+.project button {
+    background:transparent;
+    padding:12px 60px;
+    border-radius:50px;
+    font-family: 'Comfortaa', cursive;
+    color:#000;
+    font-size:20px;
+    font-weight:bold;
+    transition:0.4s ease-in-out;
+    margin:10px 0px;
+    box-shadow:0px 5px 10px #d5d5d5;
+    border:0px;
+}
+.right-arrow {
+    font-size:18px;
+    margin-left:2px;
+    }
+.project button:hover{
+    cursor:pointer;
+    box-shadow:0px 10px 28px #bbbbbb;
+}
+::-webkit-scrollbar {
+    width:5px;
+    height:5px;
+}
+::-webkit-scrollbar-track {
+    background: #282828; 
+    border-radius:5px;
+}
+::-webkit-scrollbar-thumb {
+    background: #000; 
+    border-radius:5px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}
+#details {
+    width:100%;   
+    text-align:left;
+}
+#details a {
+    font-size:24px;
+    color:#282828;
+    margin-right:4vw;
+    margin-left:5px;
+    padding:20px;
+    border-radius:50%;
+    transition:0.4s ease-in-out;
+}
+#details a:hover {
+    box-shadow:0px 5px 10px #d5d5d5;
+}
+@media (max-width: 600px){
+    #header {
+        width:94%;
+        padding:10% 3%;
+    }
+    #title {
+        font-size:30px;
+        font-family: 'Comfortaa', cursive;
+        margin:0px;
+    }
+    #links {
+        margin:20px 0px;
+    }
+    #middle {
+        width:100%;
+        border-radius:0px;
+        height:100vh;
+    }
+    #tagline {
+        width:90%;
+        font-size:34px;
+    }
+    #skillset {
+        display:inline-block;
+        width:48%;
+    }
+    #skillset h4 {
+        font-size:16px;
+    }
+    #skillset div{
+        margin:8vh 0px;
+    }
+    #wtf {
+        margin:0px 6vw !important;
+    }
+    #about {
+        text-align:center;
+    }
+    #details {
+        text-align:center;
+    }
+    #details a {
+        font-size:20px;
+        margin:0px 3vw;
+        padding:14px;
+        text-align:center;
+    }
+    #work {
+        column-count:1;
+        column-gap:0%;
+        text-align:center;
+        width:100%;
+    }
+    .project {
+        width:90%;
+        padding:5vh 5vw;
+        margin:2vh 0px;
+    }
+    #contact {
+        width:100%;
+        text-align:center;
+    }
+
+}
+@-webkit-keyframes Gradient {
+0% {background-position: 0% 50%}
+50% {background-position: 100% 50%}
+100% {background-position: 0% 50%}
+}
+@-moz-keyframes Gradient {
+0% {background-position: 0% 50%}
+50% {background-position: 100% 50%}
+100% {background-position: 0% 50%}
+}
+@keyframes Gradient {
+0% {background-position: 0% 50%}
+50% {background-position: 100% 50%}
+100% {background-position: 0% 50%}
+}
