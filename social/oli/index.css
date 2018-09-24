@@ -1,0 +1,113 @@
+body,html{
+    padding:0px;
+    margin:0px;
+    font-family: 'Comfortaa', cursive;
+    font-weight:bold;
+    }
+#header {
+    width:80%;
+    padding:4% 10%;
+}
+#header div{
+    display:inline-block;
+}
+#title {
+    font-size:30px;
+    font-family: 'Comfortaa', cursive;
+    color:#7A68FB;
+    margin:0px 20px;
+}
+#links {
+    float:right;
+    margin:15px 0px;
+}
+#links a{
+    margin:0px 20px;
+    color:#282828;
+    text-decoration:none;
+    transition:0.4s ease-in-out;
+}
+#links a:hover{
+    color:#7A68FB;
+}
+#middle {
+    width:80%;
+    height:75vh;
+    border-radius:5px;
+    background:linear-gradient(0deg,rgba(122, 104, 251,0.6),rgba(122, 104, 251,0.6)),url("https://images.pexels.com/photos/115655/pexels-photo-115655.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260") center center fixed;
+    background-size:cover;
+    color:white;
+    display:flex;
+    justify-content:center;
+    flex-direction:column;
+    transition:0.4s ease-in-out;
+}
+#tagline {
+    font-size:50px;
+    width:60%;
+}
+#tagline button{
+    color:white;
+    padding:10px 40px;
+    border-radius:50px;
+    border:2px solid #fff;
+    font-size:18px;
+    font-family: 'Comfortaa', cursive;
+    font-weight:bold;
+    background:transparent;
+    transition:0.4s ease-in-out;
+    margin:30px 0px;
+}
+#tagline button:hover{
+    background:white;
+    cursor:pointer;
+    color:#7A68FB;
+}
+#portfolio {
+    width:80%;
+    padding:4% 10%;
+}
+#portfolio div p{
+    font-size:40px;
+    color:#7A68FB;
+    font-family: 'Comfortaa', cursive;
+}
+::-webkit-scrollbar {
+    width:5px;
+    height:5px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+    border-radius:5px;
+}
+::-webkit-scrollbar-thumb {
+    background: #282828; 
+    border-radius:5px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}
+@media (max-width: 600px){
+    #header {
+        width:94%;
+        padding:10% 3%;
+    }
+    #title {
+        font-size:30px;
+        font-family: 'Comfortaa', cursive;
+        color:#7A68FB;
+        margin:0px 10px;
+    }
+    #links {
+        float:right;
+        margin:10px 0px;
+    }
+    #middle {
+        width:100%;
+        border-radius:0px;
+        height:90vh;
+    }
+    #tagline {
+        width:70%;
+    }
+}
