@@ -7,6 +7,7 @@
     <title>oli.</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     <link href="https://fonts.googleapis.com/css?family=Comfortaa:700" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="index.css">
 </head>
 <body id="body">
@@ -14,9 +15,9 @@
     <div id="header">
     <div id="title">oli.</div><br>
     <div id="links">
-        <a href="#">about</a>
-        <a href="#" style="margin:0px 60px;">works</a>
-        <a href="#">contact</a>
+        <a href="#about">about</a>
+        <a href="#work" style="margin:0px 60px;">works</a>
+        <a href="#contact">contact</a>
     </div>
     </div>
 
@@ -49,5 +50,20 @@
              </div>
     </div>
 </div>
+<script>
+$(document).ready(function(){
+  $("a").on('click', function(event) {
+    if (this.hash !== "") {
+      event.preventDefault();
+      var hash = this.hash;
+      $('body,html').animate({
+      scrollTop: $(hash).offset().top
+      }, 1500, function(){
+      window.location.hash = hash;
+     });
+     } 
+    });
+  });
+</script>
 </body>
 </html>
