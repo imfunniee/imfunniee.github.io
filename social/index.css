@@ -67,6 +67,8 @@ right:5%;
 font-size:18px;
 position:absolute;
 margin-top:-2.2%;
+font-family: 'Montserrat', sans-serif;
+font-weight: bold;
 }
 #links a{
 text-decoration:none;
@@ -242,6 +244,66 @@ background:transparent;
 border:0px;
 text-align:left;
 font-size:16px;
+}
+#form{
+width:60%;
+height:auto;
+text-align:center;
+margin-top:25vh;
+position:absolute;
+padding:8vh 0;
+background:linear-gradient(0deg,rgba(0,0,0,1),rgb(0,0,0,0.3)),url('https://images.pexels.com/photos/998641/pexels-photo-998641.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260') center center fixed;
+background-size:cover !important;
+background-repeat:no-repeat;
+border-radius:10px;
+margin-left:20%;
+}
+#form h1{
+color:#fff;
+font-family: 'Montserrat', sans-serif;
+font-weight: bold;
+}
+.error{
+color:rgb(253, 105, 105);
+font-family: 'Montserrat', sans-serif;
+font-weight: bold;
+}
+#form input{
+border:0px;
+border-bottom:2px solid rgba(255,255,255,0.6);
+background:transparent;
+color:#fff;
+font-family: 'Montserrat', sans-serif;
+font-weight: bold;
+padding:12px 30px;
+width:50%;
+margin:18px 0px;
+font-size:18px;
+transition:0.4s ease-in-out;
+}
+#form input:focus{
+border-bottom:2px solid rgba(255,255,255,1);
+}
+#form input::placeholder{
+color:#fff;
+}
+#form button{
+border:2px solid #fff;
+background:transparent;
+color:#fff;
+font-family: 'Montserrat', sans-serif;
+font-weight: bold;
+padding:14px 20px;
+width:20%;
+margin:15px 0px;
+border-radius:50px;
+font-size:16px;
+transition:0.4s ease-in-out;
+}
+#form button:hover{
+background:#fff;
+color:#000;
+cursor:pointer;
 }
 ::-webkit-scrollbar{
 width: 5px;
