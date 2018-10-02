@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>social.</title>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+     <div id="header">
+        <center>
+        <b id="social">social.</b>
+        <div id="links" style="margin-top:10px;">
+            <a href="#">About</a>
+            <a href="#" onclick="showLogIn()">Log In</a>
+            <a href="#" onclick="showSignUp()">Sign Up</a>
+        </div>
+        </center>
+    </div>
+
+    <div id="form">
+
+        <div id="login" style="display:inherit;">
+        <h1>Log In</h1>
+        <div id="error-log_in" class="error" style="display:none;">all fields required</div> <!--show error here-->
+        <form>
+            <input type="email" placeholder="your email" required><br>
+            <input type="password" placeholder="your password" required><br>
+            <button>Log In</button>
+        </form>
+        </div>
+
+        <div id="signup" style="display:none;">
+        <h1>Sign Up</h1>
+        <div id="error_sign_up" class="error" style="display:none;">all fields required</div> <!--show error here-->
+        <form>
+            <input type="text" placeholder="username" required><br>
+            <input type="email" placeholder="your email" required><br>
+            <input type="password" placeholder="your password" required><br>
+            <button>Sign Up</button>
+        </form>
+        </div>
+
+    </div>
+
+    <script type="text/javascript">
+    function showSignUp(){
+        if($("#signup").css("display") == "inherit"){
+            return;
+        }
+        $("#login").addClass("animated fadeOut");
+        setTimeout(function(){
+            $("#login").css("display","none");
+            $("#login").removeClass("animated fadeOut");
+            $("#signup").addClass("animated fadeIn");
+            $("#signup").css("display","inherit");
+        },800);
+    }
+    function showLogIn(){
+        if($("#login").css("display") == "inherit"){
+            return;
+        }
+        $("#signup").addClass("animated fadeOut");
+        setTimeout(function(){
+            $("#signup").css("display","none");
+            $("#signup").removeClass("animated fadeOut");
+            $("#login").addClass("animated fadeIn");
+            $("#login").css("display","inherit");
+        },800);
+    }
+    </script>
+</body>
+</html>
