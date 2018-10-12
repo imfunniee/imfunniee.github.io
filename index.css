@@ -4,6 +4,7 @@ body,html{
     font-family: 'Comfortaa', cursive;
     font-weight:bold;
     background:url("https://images.pexels.com/photos/262738/pexels-photo-262738.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260") center center fixed;
+    background-size:cover;
     }
 #header {
     width:80%;
@@ -76,14 +77,23 @@ body,html{
 #portfolio {
     background:white;
     width:80%;
-    padding:4% 10%;
-    min-height:40vh;
+    padding:5% 10%;
 }
 #portfolio div {
     font-size:20px;
 }
 #about,#work,#contact {
     margin:10vh 0px;
+}
+#work h1 span {
+    margin:10px 20px;
+    border-bottom:4px solid transparent;
+    padding:8px 0px;
+    transition:0.4s ease-in-out;
+}
+#work h1 span:hover {
+    border-bottom:4px solid #000;
+    cursor:pointer;
 }
 #portfolio div p{
     font-size:50px;
@@ -183,6 +193,11 @@ body,html{
     cursor:pointer;
     box-shadow:0px 10px 28px #bbbbbb;
 }
+.project img {
+    width:100%;
+    height:auto;
+    border-radius:10px;
+}
 ::-webkit-scrollbar {
     width:5px;
     height:5px;
@@ -214,7 +229,7 @@ body,html{
 #details a:hover {
     box-shadow:0px 5px 10px #d5d5d5;
 }
-@media (max-width: 600px){
+@media (max-width: 800px){
     #header {
         width:94%;
         padding:10% 3%;
@@ -275,6 +290,9 @@ body,html{
     #contact {
         width:100%;
         text-align:center;
+    }
+    #work h1 span{
+        font-size:24px;
     }
 
 }
