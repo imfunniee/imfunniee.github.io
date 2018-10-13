@@ -3,8 +3,9 @@ body,html{
     margin:0px;
     font-family: 'Comfortaa', cursive;
     font-weight:bold;
-    background:url("https://images.pexels.com/photos/262738/pexels-photo-262738.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260") center center fixed;
-    background-size:cover;
+    background:url("https://images.pexels.com/photos/1109354/pexels-photo-1109354.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260") center center fixed;
+    background-size:140% 140%;
+    transition:0.8s ease-in-out;
     }
 #header {
     width:80%;
@@ -41,7 +42,7 @@ body,html{
     width:100%;
     height:100vh;
     border-radius:0px;
-    background:linear-gradient(-225deg, rgba(56, 141, 250, 0.8) 0%, rgba(159, 89, 242,0.8) 29%, rgba(245, 47, 98,0.8) 67%, rgba(245, 194, 47,0.8) 100%);
+    background:linear-gradient(-225deg, rgba(56, 141, 250, 0.7) 0%, rgba(159, 89, 242,0.7) 29%, rgba(245, 47, 98,0.7) 67%, rgba(168, 127, 2, 0.7) 100%);
     color:white;
     display:flex;
     justify-content:center;
@@ -52,6 +53,7 @@ body,html{
     -moz-animation: Gradient 100s ease infinite;
     -o-animation: Gradient 100s ease infinite;
     animation: Gradient 100s ease infinite;
+    z-index:4;
 }
 #tagline {
     font-size:50px;
@@ -203,11 +205,11 @@ body,html{
     height:5px;
 }
 ::-webkit-scrollbar-track {
-    background: #282828; 
+    background: #c1c1c1; 
     border-radius:5px;
 }
 ::-webkit-scrollbar-thumb {
-    background: #000; 
+    background: #9e9e9e; 
     border-radius:5px;
 }
 ::-webkit-scrollbar-thumb:hover {
