@@ -1,0 +1,122 @@
+body {
+    margin:0;
+    padding:0;
+    font-family: 'Lato', sans-serif;
+}
+header {
+    width:90vw;
+    padding:5vh 5vw;
+}
+header div {
+    display:inline-block;
+}
+#logo {
+    color:#FF717C;
+    font-weight:bold;
+    font-size:32px;
+}
+#nav {
+    float:right;
+}
+#nav a {
+    margin-left:5vw;
+    text-decoration:none;
+    font-weight:bold;
+    color:#000;
+    font-size:18px;
+    position:relative;
+    top:12px;
+    padding:4px 0px;
+    transition:0.4s ease-in-out;
+}
+#nav a:hover {
+    color:#FF717C;
+}
+#public {
+    width:90vw;
+    padding:5vh 5vw;
+}
+#paste-container {
+    column-count:3;
+    column-gap:4%;
+    padding:2% 0%;
+}
+.paste {
+    width:90%;
+    background:#fff;
+    padding:1% 6%;
+    font-weight:bold;
+    margin:4% 0%;
+    transition:0.4s ease-in-out;
+    border-radius:6px;
+    display:inline-block;
+    box-shadow:0px 0px 1px #ebebeb;
+    color:#000;
+}
+.paste:hover {
+    cursor:pointer;
+    color:#FF717C;
+    box-shadow:0px 5px 12px #d5d5d5;
+}
+#form {
+    width:90%;
+    padding:5%;
+}
+#form input,textarea {
+    width:60%;
+    padding:12px 14px;
+    border:0;
+    font-family: 'Lato', sans-serif;
+    font-size:20px;
+    margin:18px 0px;
+    font-weight:bold;
+    resize:none;
+    border-bottom:3px solid rgb(196, 196, 196);
+    transition:0.4S ease-in-out;
+}
+#form input,textarea:focus {
+    outline:none;
+}
+#form input:focus {
+     border-bottom:3px solid #FF717C;
+}
+#form textarea:focus {
+     border-bottom:3px solid #FF717C;
+}
+.button-pst {
+    padding:12px 30px;
+    border:0;
+    font-family: 'Lato', sans-serif;
+    font-size:18px;
+    margin:18px 0;
+    font-weight:bold;
+    resize:none;
+    box-shadow:0px 4px 8px #d5d5d5;
+    border-radius:50px;
+    background:#fff;
+    margin-right:20px;
+    transition:0.4s ease-in-out;
+}
+.button-pst:focus {
+    outline:none;
+}
+.button-pst:hover {
+    color:#FF717C;
+    cursor:pointer;
+    box-shadow:0px 2px 4px #d5d5d5;
+}
+::placeholder {
+    color:#000;
+}
+#legal {
+    width:90%;
+    padding:5%;
+}
+#main-paste {
+    width:90%;
+    padding:4% 5%;
+}
+#main-paste p {
+    font-weight:bold;
+    font-size:20px;
+}
