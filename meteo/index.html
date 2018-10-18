@@ -140,7 +140,7 @@
          var x = 0.4;
          $.each(cities, function(i, v){
          if(v.name.search(new RegExp(city, "i")) != -1){
-         document.getElementById("results").innerHTML += '<a href="index.html#'+v.name%20v.country+'" onclick="displayWh();"><div class="animated slideInLeft" style="-webkit-animation-delay: '+x+'s;">'+v.name+', '+v.country+'</div></a>';
+         document.getElementById("results").innerHTML += '<a href="index.html#'+v.name+' '+v.country+'" onclick="displayWh();"><div class="animated slideInLeft" style="-webkit-animation-delay: '+x+'s;">'+v.name+', '+v.country+'</div></a>';
          x += 0.1;
          return;
          }
