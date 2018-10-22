@@ -42,8 +42,6 @@
       <div id="header">
          <div id="logo" class="logo-animation">meteo.</div>
          <div id="links">
-            <a onclick="gest.start();hideThis();" id="sta">gesture control <i class="far fa-hand-paper"></i></a>
-            <a onclick="gest.stop();unhideThis();" id="st" style="display:none">stop gesture control <i class="far fa-hand-paper"></i></a>
             <a onclick="showSearch();"><i class="fas fa-search search-logo"></i> &nbsp; </a>
          </div>
       </div>
@@ -147,15 +145,6 @@
          });
          }
          }
-         gest.options.subscribeWithCallback(function(gesture) {
-         if(gesture.direction){
-         if(gesture.direction == "Left"){
-           showSearch();
-         }
-         else if(gesture.direction == "Right"){
-           hideSearch();
-         }
-         }else{alert(gesture.error.message)}});
       </script>
    </body>
 </html>
