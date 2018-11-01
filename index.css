@@ -42,7 +42,7 @@ body,html{
     width:100%;
     height:100vh;
     border-radius:0px;
-    background:linear-gradient(-225deg, rgba(56, 141, 250, 0.7) 0%, rgba(159, 89, 242,0.7) 29%, rgba(245, 47, 98,0.7) 67%, rgba(168, 127, 2, 0.7) 100%);
+    background:linear-gradient(-225deg, rgba(56, 141, 250, 0.8) 0%, rgba(159, 89, 242,0.8) 29%, rgba(245, 47, 98,0.8) 67%, rgba(168, 127, 2, 0.8) 100%);
     color:white;
     display:flex;
     justify-content:center;
@@ -60,20 +60,40 @@ body,html{
     width:60%;
     margin-top:10vh;
 }
-#tagline button{
+#tagline a{
     color:white;
     padding:10px 40px;
     border-radius:50px;
-    border:2px solid #fff;
+    border:2px solid transparent;
     font-size:18px;
     font-family: 'Comfortaa', cursive;
     font-weight:bold;
     background:transparent;
     transition:0.4s ease-in-out;
     margin:8vh 0px;
+    text-decoration:none;
+    position:relative;
+    animation: updown 3s infinite linear;
 }
-#tagline button:hover{
-    transform:scale(1.2);
+@keyframes updown{
+    0% {
+        top:0;
+    }
+    25% {
+        top:-1vh;
+    }
+    50% {
+        top:0;
+    }
+    75% {
+        top:1vh;
+    }
+    100% {
+        top:0;
+    }
+}
+#tagline a:hover{
+    transform:scale(1.1);
     cursor:pointer;
 }
 #portfolio {
@@ -110,49 +130,9 @@ body,html{
     animation: Gradient 100s ease infinite;
     font-family: 'Comfortaa', cursive;
 }
-#skillset {
-     display:inline-block;
-     width:18%;
-}
-#outer1 {
-    width:100px;
-    height:100px;
-}
-#outer1 > svg {
-    width: 100%;
-    display: block;
-}
-#outer2 {
-    width:100px;
-    height:100px;
-}
-#outer2 > svg {
-    width: 100%;
-    display: block;
-}
-#outer3 {
-    width:100px;
-    height:100px;
-}
-#outer3 > svg {
-    width: 100%;
-    display: block;
-}
-#outer4 {
-    width:100px;
-    height:100px;
-}
-#outer4 > svg {
-    width: 100%;
-    display: block;
-}
-#outer5 {
-    width:100px;
-    height:100px;
-}
-#outer5 > svg {
-    width: 100%;
-    display: block;
+#about table tr td {
+    padding:8px 30px;
+    padding-left:0px !important;
 }
 #work {
     column-count:2;
@@ -252,16 +232,6 @@ body,html{
     #tagline {
         width:90%;
         font-size:34px;
-    }
-    #skillset {
-        display:inline-block;
-        width:48%;
-    }
-    #skillset h4 {
-        font-size:16px;
-    }
-    #skillset div{
-        margin:8vh 0px;
     }
     #wtf {
         margin:0px 6vw !important;

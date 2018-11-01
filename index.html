@@ -41,34 +41,44 @@
              <div id="about">
                  <p>skills.</p>  
                  <div>
-                 <center>
-                    <div id="skillset">
-                        <h4>HTML5/CSS3</h4>
-                        <div id="outer1"></div>
-                        <h4>94%</h4>
-                    </div>
-                    <div id="skillset">
-                            <h4>JavaScript/Jquery</h4>
-                            <div id="outer2"></div>
-                            <h4>73%</h4>
-                    </div>
-                    <div id="skillset">
-                            <h4>Frameworks</h4>
-                            <div id="outer3"></div>
-                            <h4>60%</h4>
-                    </div>
-                    <div id="skillset">
-                            <h4>UI/UX</h4>
-                            <div id="outer4"></div>
-                            <h4>70%</h4>
-                    </div>
-                    <div id="skillset">
-                            <h4>Backend</h4>
-                            <div id="outer5"></div>
-                            <h4>50%</h4>
-                    </div>
-                </center>
-
+                   <h2>Frontend Development</h2>
+                   <table>
+                       <tr>
+                           <td>HTML5</td>
+                           <td>CSS3</td>
+                           <td>JavaScript</td>
+                           <td>Jquery</td>
+                           <td>Bootstrap</td>
+                           <td>Vue (beginner)</td>
+                       </tr>
+                   </table>
+                   <h2>Backend Development</h2>
+                   <table>
+                       <tr>
+                           <td>NodeJS</td>
+                           <td>PHP</td>
+                           <td>Firebase</td>
+                       </tr>
+                   </table>
+                   <h2>UI/UX Design</h2>
+                   <table>
+                       <tr>
+                           <td>Adobe xD</td>
+                           <td>Photoshop</td>
+                           <td>After Effects</td>
+                           <td>Gimp 2</td>
+                           <td>Microsoft Paint :p</td>
+                       </tr>
+                   </table>
+                   <h2>¯\_(ツ)_/¯</h2>
+                   <table>
+                    <tr>
+                        <td>Dialogflow</td>
+                        <td>CorelDRAW</td>
+                        <td>3dsMax</td>
+                        <td>Unity</td>
+                    </tr>
+                </table>
                     <p></p><br>I develop fast interactive front-ends, using the latest technologies and techniques to reduce page load time.<br>
                     Although I'm very familiar with using frameworks, my websites are primarily hand-coded using HTML5, CSS3, SVG & JavaScript.</div> 
              </div>
@@ -117,6 +127,12 @@
 
                 <div id="design" style="display:none;">
                     <div class="project">
+                        <img src="https://cdn.dribbble.com/users/2574485/screenshots/5424634/nav-micro.gif">
+                    </div>
+                    <div class="project">
+                        <img src="https://cdn.dribbble.com/users/2574485/screenshots/5424125/youtube_4x.png">
+                    </div>
+                    <div class="project">
                         <img src="https://cdn.dribbble.com/users/2574485/screenshots/5389842/facebook1_4x.png">
                     </div>
                      <div class="project">
@@ -159,12 +175,25 @@
 <script src="index.js" type="text/JavaScript"></script>
 <script type="text/JavaScript">
     var typed = new Typed('#typehere', {
-    strings: ["hi imfunny, a Junior front-end developer and UI/UX Designer who’s comfortable with the server-side.<br><a href='#portfolio'><button>scroll down</button></a>"],
+    strings: ["hi imfunny, a Junior front-end developer and UI/UX Designer who’s comfortable with the server-side.<br><a href='#portfolio'>scroll down</a>"],
     typeSpeed: 28,
     smartBackspace: true,
     backSpeed: 28,
     showCursor: false,
     startDelay: 200
+   });
+   $(document).ready(function(){
+    $("a").on('click', function(event) {
+      if (this.hash !== "") {
+      event.preventDefault();
+      var hash = this.hash;
+      $('body,html').animate({
+      scrollTop: $(hash).offset().top
+      }, 1500, function(){
+      window.location.hash = hash;
+      });
+      } 
+    });
    });
 </script>
 </body>
