@@ -239,6 +239,11 @@ body,html{
     #about {
         text-align:center;
     }
+    #about table tr td {
+        padding:8px 15px !important;
+        margin:15px 10px;
+        display:inline-block;
+    }
     #details {
         text-align:center;
     }
