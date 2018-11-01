@@ -147,12 +147,13 @@ body,html{
     padding:4vh 2vw;
     color:#282828;
     border-radius:8px;
-    box-shadow:0px 4px 14px #d5d5d5;
+    box-shadow:0px 0px 1px #d5d5d5;
     transition:0.4s ease-in-out;
     word-wrap: break-word;
 }
 .project:hover {
     transform:scale(1.06);
+    box-shadow:0px 4px 8px #d5d5d5;
 }
 .project button {
     background:transparent;
@@ -163,8 +164,8 @@ body,html{
     font-size:20px;
     font-weight:bold;
     transition:0.4s ease-in-out;
-    margin:10px 0px;
-    box-shadow:0px 4px 8px #d5d5d5;
+    margin:10px 10px;
+    box-shadow:0px 3px 6px #d5d5d5;
     border:0px;
 }
 .right-arrow {
@@ -173,7 +174,11 @@ body,html{
     }
 .project button:hover{
     cursor:pointer;
-    box-shadow:0px 10px 28px #bbbbbb;
+    box-shadow:0px 6px 16px #bbbbbb;
+}
+.project button:focus{
+    box-shadow:inset 0px 6px 10px #bbbbbb;
+    outline:none;
 }
 .project img {
     width:100%;
