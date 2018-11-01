@@ -147,7 +147,7 @@ body,html{
     padding:4vh 2vw;
     color:#282828;
     border-radius:8px;
-    box-shadow:0px 4px 8px #d5d5d5;
+    box-shadow:0px 4px 14px #d5d5d5;
     transition:0.4s ease-in-out;
     word-wrap: break-word;
 }
@@ -209,7 +209,7 @@ body,html{
     transition:0.4s ease-in-out;
 }
 #details a:hover {
-    box-shadow:0px 5px 10px #d5d5d5;
+    box-shadow:0px 6px 10px #d5d5d5;
 }
 @media (max-width: 800px){
     #header {
