@@ -8,21 +8,25 @@ body{
     max-width:100vw;
     overflow-x:hidden;
     color:#fff;
+    background:#000;
 }
 #header {
     padding:6vh 4vw;
     width:92vw;
     color:inherit;
     font-weight:bold;
-    font-size:38px;
+    font-size:34px;
     text-align:center;
+    z-index:2;
+    background:transparent !important;
 }
 #logo {
   float:left;
   padding:8px 0px;
+  border-radius:50px;
 }
 #logo b {
-  background-image: linear-gradient(to right, #0acffe, #495aff, #0acffe);
+  background-image:linear-gradient(to right, #0acffe, #495aff, #0acffe);
 	-webkit-background-clip: text;
 	background-clip: text;
 	-webkit-text-fill-color: transparent;
@@ -31,6 +35,26 @@ body{
 	-moz-animation: Gradient 100s ease infinite;
 	-o-animation: Gradient 100s ease infinite;
 	animation: Gradient 100s ease infinite;
+}
+#middle {
+  width:90vw;
+  padding:0px 5vw;
+  height:80vh;
+  text-align:center;
+  justify-content:center;
+  display:flex;
+  flex-direction:column;
+  font-weight:bold;
+  background:linear-gradient(0deg,rgba(0,0,0,1),rgba(0,0,0,0.2)),url('https://images.pexels.com/photos/952437/pexels-photo-952437.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260') center center;
+  background-size:cover !important;
+  background-repeat:no-repeat;
+  position:absolute;
+  margin-top:-18vh;
+  z-index:-1;
+}
+#middle b {
+  font-size:50px;
+  margin-top:15vh;
 }
 #search {
   display:inline-block;
@@ -53,14 +77,15 @@ body{
   outline:none;
   border-bottom:2px solid rgba(255,255,255,1) !important;
 }
-
 #movie {
-  width:80vw;
-  padding:4vh 10vw;
-  background:inherit;
+  width:90vw;
+  padding:2vh 5vw;
+  background:#000;
   font-weight:bold;
   color:inherit;
   font-size:18px;
+  z-index:1;
+  margin-top:60vh;
 }
 #movie h1 {
   background-image: linear-gradient(to right, #0acffe, #495aff, #0acffe);
@@ -84,24 +109,87 @@ body{
 	-webkit-animation: Gradient 100s ease infinite;
 	-moz-animation: Gradient 100s ease infinite;
 	-o-animation: Gradient 100s ease infinite;
-	animation: Gradient 100s ease infinite;
+  animation: Gradient 100s ease infinite;
 }
 .movie-detail table {
-  width:100%;
+  width:100%;  
+}
+.movie-detail table tr td {
+  text-align:justify;
 }
 .movie-poster{
-  width:30%;
+  width:25%;
 }
 .movie-about {
-  width:60%;
-  padding:5%;
+  width:65%;
+  padding:2% 5%;
 }
 .movie-poster img {
   width:100%;
   height:auto;
   border-radius:6px;
 }
-
+#review-section {
+  width:100%;
+  margin:15px 0px;
+}
+.glow {
+  transform:scale(1.2);
+  transition:0.4s ease-in-out;
+}
+#review-section input {
+  font-size:18px;
+  font-family: 'Josefin Sans', sans-serif;
+  color:inherit;
+  border:0px;
+  width:90%;
+  padding:10px 20px;
+  font-weight:bold;
+  margin:15px 0px;
+  background:transparent;
+  border-bottom:2px solid rgba(255,255,255,0.6) !important;
+  transition:0.4s ease-in-out !important;
+}
+#review-section input:focus{
+  outline:none;
+  border-bottom:2px solid rgba(255,255,255,1) !important;
+}
+.star {
+  font-size:18px;
+  background:transparent;
+  padding:8px 0px;
+  color:#fff;
+  border:0px;
+  margin:15px 0px;
+  margin-right:1vw !important;
+  transition:0.4s ease-in-out;
+}
+.star {
+  cursor:pointer;
+}
+.submit {
+  background:transparent;
+  border:2px solid #fff;
+  border-radius:50px;
+  padding:8px 30px;
+  color:#fff;
+  font-size:18px;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight:bold;
+  margin:15px 0px;
+  transition:0.4s ease-in-out;
+}
+.submit:hover {
+  background:#fff;
+  color:#000;
+  cursor:pointer;
+}
+.submit:disabled {
+  opacity:0.4;
+}
+input,button:focus {
+  outline:none;
+}
 ::placeholder {
   color:#fff;
 }

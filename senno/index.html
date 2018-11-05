@@ -4,66 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>senno</title>
+    <title>Senno</title>
     <link rel="stylesheet" href="index.css">
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div id="header">
-        <div id="logo"><b>senno</b></div>
-        <center>
-        <div id="search">
-            <input type="text" placeholder="search for a movie">
-        </div>
-        </center>
+<div id="header">
+    <div id="logo"><b>Senno</b></div>
+    <center>
+    <div id="search">
+        <input type="text" placeholder="search for a movie">
     </div>
+    </center>
+</div>
 
-    <div id="movie"></div>
+<div id="middle">
+    <b>Rate Your Favorite Movies & Music</b>
+</div>
 
-    </div>
+<div id="movie">
+    <h2>Movies</h2>
+</div>
 
-    <script type="text/javascript">
-    $.getJSON("https://raw.githubusercontent.com/FEND16/movie-json-data/master/json/movies-in-theaters.json", function(response){
-        for(i = 0; i < response.length; i++){
-            var actors = [];
-            for(x=0;x<response[i].actors.length;x++){
-                actors.push(response[i].actors[x]+' &nbsp;');
-            }
-            var genres = [];
-            for(x=0;x<response[i].genres.length;x++){
-                genres.push(response[i].genres[x]+' &nbsp;');
-            }
-           $('#movie').append(`
-           <div class="movie-detail">
-           <table>
-                <tr>
-                    <td class="movie-poster">
-                            <img src="${response[i].posterurl}">
-                    </td>
-                    <td class="movie-about">
-                        <h1>${response[i].title}</h1>
-                        <h3>${response[i].year}</h3>
-                        <p>${response[i].storyline}</p>
-                        <p id="actors${response[i].id}">
-                            Actors: 
-                        </p>
-                        <p id="genres${response[i].id}" class="genres">
-                            Genres: 
-                        </p>
-                    </td>
-                </tr>
-            </table>
-            </div>
-           `);
-           for(x=0;x<response[i].actors.length;x++){
-            $(`#actors${response[i].id}`).append(actors[x]);
-            }
-           for(x=0;x<response[i].genres.length;x++){
-            $(`#genres${response[i].id}`).append(genres[x]);
-            }
-        }
-    });
-    </script>
+<!-- script -->
+<script type="text/javascript" src="index.js"></script>
 </body>
 </html>
