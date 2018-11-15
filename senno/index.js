@@ -109,6 +109,10 @@ function showstar(starid){
     }
 }
 
+$.getJSON("https://api.spotify.com/v1/albums/0ZHyvPke0EcVt6rYA8Ins3?market=US",function(data){
+console.log(data);
+});
+
 function submit(movieID){
     var star = $(`#value${movieID}`).val();
     var comment = $(`#review-comment${movieID}`).val();
