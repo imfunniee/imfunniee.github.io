@@ -1,126 +1,64 @@
-$.getJSON("https://raw.githubusercontent.com/FEND16/movie-json-data/master/json/movies-in-theaters.json", function(response){
-for(i = 0; i < response.length; i++){
-    var actors = [];
-    for(x=0;x<response[i].actors.length;x++){
-        actors.push(response[i].actors[x]+' &nbsp;');
-    }
-    var genres = [];
-    for(x=0;x<response[i].genres.length;x++){
-        genres.push(response[i].genres[x]+' &nbsp;');
-    }
-   $('#movie').append(`
-   <div class="movie-detail">
-   <table>
-        <tr>
-            <td class="movie-poster">
-                    <img src="${response[i].posterurl}">
-            </td>
-            <td class="movie-about">
-                <h1>${response[i].title}</h1>
-                <h3>${response[i].year}</h3>
-                <p>${response[i].storyline}</p>
-                <p id="actors${response[i].id}">
-                    Actors: 
-                </p>
-                <p id="genres${response[i].id}" class="genres">
-                    Genres: 
-                </p>
-                <div id="review-section">
-                <h2 id="value${response[i].id}" value="0">Rate this Movie</h2>
-                <button class="star" id="star1${response[i].id}" onmouseover="showstar('1${response[i].id}')" value="0"><i class="far fa-star"></i></button>
-                <button class="star" id="star2${response[i].id}" onmouseover="showstar('2${response[i].id}')" value="0"><i class="far fa-star"></i></button>
-                <button class="star" id="star3${response[i].id}" onmouseover="showstar('3${response[i].id}')" value="0"><i class="far fa-star"></i></button>
-                <button class="star" id="star4${response[i].id}" onmouseover="showstar('4${response[i].id}')" value="0"><i class="far fa-star"></i></button>
-                <button class="star" id="star5${response[i].id}" onmouseover="showstar('5${response[i].id}')" value="0"><i class="far fa-star"></i></button><br>
-                <input type="text" placeholder="comment" id="review-comment${response[i].id}"><br>
-                <button class="submit" id="submit${response[i].id}" onclick="submit('${response[i].id}')">Submit</button>
-                <h4 id="error${response[i].id}"></h4>
-                </div>
-            </td>
-        </tr>
-    </table>
-    <div id="reviews">
-    <h2>Reviews</h2>
-    No Reviews Yet :(
+$.getJSON("https://raw.githubusercontent.com/FEND16/movie-json-data/master/json/movies-coming-soon.json",function(data){
+for(i = 0; i < data.length; i++){
+    var url = data[i].posterurl;
+    url = url.toString().split("_");
+    url = url[0]+"_"+url[1]+"_"+url[2]+url[5];
+    url = url.replace("SY500","SY760");
+    $(".scrolling-wrapper").append(`
+    <a href="movie.html#${data[i].id}">
+    <div class="movie" id="movie${i}" onclick="showDetails('${data[i].id}')">
+    <div id="movie-background" style="background:url('${url}') center top;"></div>
+    <div id="content">
+    <b>${data[i].title}</b><br>
+    <span>${data[i].year}</span>
     </div>
     </div>
-   `);
-   for(x=0;x<response[i].actors.length;x++){
-    $(`#actors${response[i].id}`).append(actors[x]);
-    }
-   for(x=0;x<response[i].genres.length;x++){
-    $(`#genres${response[i].id}`).append(genres[x]);
-    }
+    </a>
+    `);
 }
 });
 
-function showstar(starid){
-    var onStar = starid.substr('0','1');
-    var whichStar = starid.slice('1');
-    switch(onStar){
-        case "1" : 
-        $(`#star1${whichStar}`).html('<i class="fas fa-star glow"></i>');
-        $(`#star2${whichStar}`).html('<i class="far fa-star"></i>');
-        $(`#star3${whichStar}`).html('<i class="far fa-star"></i>');
-        $(`#star4${whichStar}`).html('<i class="far fa-star"></i>');
-        $(`#star5${whichStar}`).html('<i class="far fa-star"></i>');
-        $(`#value${whichStar}`).val("1");
-        break;
-        case "2" : 
-        $(`#star1${whichStar}`).html('<i class="fas fa-star glow"></i>');
-        $(`#star2${whichStar}`).html('<i class="fas fa-star glow"></i>');
-        $(`#star3${whichStar}`).html('<i class="far fa-star"></i>');
-        $(`#star4${whichStar}`).html('<i class="far fa-star"></i>');
-        $(`#star5${whichStar}`).html('<i class="far fa-star"></i>');
-        $(`#value${whichStar}`).val("2");
-        break;
-        case "3" : 
-        $(`#star1${whichStar}`).html('<i class="fas fa-star glow"></i>');
-        $(`#star2${whichStar}`).html('<i class="fas fa-star glow"></i>');
-        $(`#star3${whichStar}`).html('<i class="fas fa-star glow"></i>');
-        $(`#star4${whichStar}`).html('<i class="far fa-star"></i>');
-        $(`#star5${whichStar}`).html('<i class="far fa-star"></i>');
-        $(`#value${whichStar}`).val("3");
-        break;
-        case "4" : 
-        $(`#star1${whichStar}`).html('<i class="fas fa-star glow"></i>');
-        $(`#star2${whichStar}`).html('<i class="fas fa-star glow"></i>');
-        $(`#star3${whichStar}`).html('<i class="fas fa-star glow"></i>');
-        $(`#star4${whichStar}`).html('<i class="fas fa-star glow"></i>');
-        $(`#star5${whichStar}`).html('<i class="far fa-star"></i>');
-        $(`#value${whichStar}`).val("4");
-        break;
-        case "5" : 
-        $(`#star1${whichStar}`).html('<i class="fas fa-star glow"></i>');
-        $(`#star2${whichStar}`).html('<i class="fas fa-star glow"></i>');
-        $(`#star3${whichStar}`).html('<i class="fas fa-star glow"></i>');
-        $(`#star4${whichStar}`).html('<i class="fas fa-star glow"></i>');
-        $(`#star5${whichStar}`).html('<i class="fas fa-star glow"></i>');
-        $(`#value${whichStar}`).val("5");
-        break;
-        default : 
-        $(`#star1${whichStar}`).html('<i class="far fa-star"></i>');
-        $(`#star2${whichStar}`).html('<i class="far fa-star"></i>');
-        $(`#star3${whichStar}`).html('<i class="far fa-star"></i>');
-        $(`#star4${whichStar}`).html('<i class="far fa-star"></i>');
-        $(`#star5${whichStar}`).html('<i class="far fa-star"></i>');
-        $(`#value${whichStar}`).val("0");
-        break;
+db.collection("movie").orderBy("starRate","desc")
+.onSnapshot(function(querySnapshot){
+    if(querySnapshot.empty == false){
+        $("#ratedMovies").html("<h1>Top Rated Movies</h1>");
     }
-}
-
-$.getJSON("https://api.spotify.com/v1/albums/0ZHyvPke0EcVt6rYA8Ins3?market=US",function(data){
-console.log(data);
+    var iDs = [];
+    querySnapshot.docChanges().forEach(function(change){
+        iDs = [];
+        $("#ratedMovies").html("<h1>Top Rated Movies</h1>");        
+    });
+    querySnapshot.forEach(function(doc){
+        iDs.push(doc.data().movieId);
+    });
+    $.getJSON("https://raw.githubusercontent.com/FEND16/movie-json-data/master/json/movies-coming-soon.json",function(data){
+        for(i = 0; i < iDs.length; i++){
+            var id = Number(iDs[i])-1;
+            var url = data[id].posterurl;
+            url = url.toString().split("_");
+            url = url[0]+"_"+url[1]+"_"+url[2]+url[5];
+            url = url.replace("SY500","SY760");
+            $("#ratedMovies").append(`
+            <a href="movie.html#${data[id].id}">
+            <div class="movie" id="movie${id}" onclick="showDetails('${data[id].id}')">
+            <div id="movie-background" style="background:url('${url}') center top;"></div>
+            <div id="content">
+            <b>${data[id].title}</b><br>
+            <span>${data[id].year}</span>
+            </div>
+            </div>
+            </a>
+            `);
+        }
+    });
 });
 
-function submit(movieID){
-    var star = $(`#value${movieID}`).val();
-    var comment = $(`#review-comment${movieID}`).val();
-    if(star == 0){
-        $(`#error${movieID}`).html("star rating can't be empty");
-        return;
-    }
-    $(`#submit${movieID}`).attr("disabled",true);
-    $(`#error${movieID}`).html("please wait...");
-    console.log("ok");
-}
+$(document).ready(() => {
+    setTimeout(() => {
+        $("#loading").addClass("animated fadeOut");
+        setTimeout(() => {
+        $("#loading").css("display","none");
+        $("#loading").removeClass("animated fadeOut");
+        },800);
+    },4500)
+});

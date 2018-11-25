@@ -55,15 +55,10 @@
     <a href="index.html">Home</a>
     <a onclick="signinbox()" id="checkUserBar">Sign In</a>
 </div>
-<section id="the_movies">
-<center>
-    <div id="ratedMovies"></div>
-    <div class="scrolling-wrapper">
-       <h1 id="title_thingy">Unrated Movies</h1>
-    </div>
-</center>
-</section>
-
+<div id="details">
+</div>
+<div id="inner_details">
+</div>
 <!-- script -->
 <script src="https://www.gstatic.com/firebasejs/5.5.9/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/5.5.9/firebase-firestore.js"></script>
@@ -80,6 +75,6 @@
   firebase.initializeApp(config);
 </script>
 <script type="text/javascript" src="common.js"></script>
-<script type="text/javascript" src="index.js"></script>
+<script type="text/javascript" src="movie.js"></script>
 </body>
 </html>
