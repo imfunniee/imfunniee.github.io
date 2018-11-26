@@ -520,6 +520,11 @@ header table {
   outline:none;
 }
 
+#the_movies a {
+  color:#000 !important;
+  text-decoration:none;
+}
+
 @media (max-width:800px) {
   #inner_details {
     width:92vw;
