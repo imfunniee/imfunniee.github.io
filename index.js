@@ -11,12 +11,18 @@ function showweb(){
     $("#des-btn").css("border-bottom","4px solid transparent");
 }
 
-window.onscroll = function() {myFunction()};
+setTimeout(function(){
+    $("#loading").addClass("animated fadeOut");
+    setTimeout(function(){
+        $("#loading").removeClass("animated fadeOut");
+        $("#loading").css("display", "none");
+    },800);
+},2000);
 
-function myFunction() {
+window.onscroll = function(){
     if(document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
         document.body.style.backgroundSize = "100% 100%";
     }else{
         document.body.style.backgroundSize = "140% 140%";
     }
-}
+};

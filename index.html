@@ -17,7 +17,7 @@
     <meta property="twitter:description" content="hi imfunny, a Junior front-end developer and UI/UX Designer who’s comfortable with the server-side." />
     <meta property="twitter:image" content="https://imfunniee.github.io/og.png">
     <meta property="twitter:url" content="https://imfunniee.github.io/">
-    <link rel="icon" href="icon.png" type="image/png" />
+    <link rel="icon" href="https://imfunniee.github.io/icon.png" type="image/png" />
     <meta name="google-site-verification" content="mjFIZTxE_IKhH-lBgPwblCJ1xPugeI5RRe0qnXF10M8" />
     <title>imfunny.</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
@@ -25,13 +25,16 @@
     <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="index.css">    
 </head>
 <body id="body">
-<div class="animated fadeIn">
+<div id="loading">
+    <h1>imfunny.</h1>
+    <div id="spinner"></div>
+</div>
     <center>
     <div id="middle">
-            <div id="header">
+            <div id="header" class="animated bounceInDown" style="animation-delay:2.4s;">
                     <div id="title">imfunny.</div><br>
                     <div id="links">
                         <a href="#about">skills</a>
@@ -58,7 +61,6 @@
                            <td>JavaScript</td>
                            <td>Jquery</td>
                            <td>Bootstrap</td>
-                           <td>Vue (beginner)</td>
                        </tr>
                    </table>
                 </p>
@@ -80,7 +82,7 @@
                            <td>Photoshop</td>
                            <td>After Effects</td>
                            <td>Gimp 2</td>
-                           <td>Pencil & Paper :p</td>
+                           <td>Microsoft Paint :p</td>
                        </tr>
                    </table>
                 </p>
@@ -108,6 +110,18 @@
                  <h1><span id="web-btn" style="border-bottom:4px solid #000;" onclick="showweb()">web work.</span>
                     <span onclick="showdes()" id="des-btn">designs.</span></h1>
                  <div id="web">
+                  <div class="project">
+                          <h1>wybemf</h1>
+                          <h3>open source platform to connect dreamers (my dream project)</h3>
+                          <a href="https://wybemfapp.firebaseapp.com/" target="_blank"><button>visit <i class="fas fa-long-arrow-alt-right right-arrow"></i></button></a>
+                          <a href="https://github.com/imfunniee/wybemf" target="_blank"><button><i class="fas fa-code right-arrow"></i> code</button></a>
+                  </div>
+                 <div class="project">
+                        <h1>senno</h1>
+                        <h3>a movie rating website build using movie data i found on github</h3>
+                        <a href="https://imfunniee.github.io/senno/" target="_blank"><button>visit <i class="fas fa-long-arrow-alt-right right-arrow"></i></button></a>
+                        <a href="https://github.com/imfunniee/imfunniee.github.io/tree/master/senno" target="_blank"><button><i class="fas fa-code right-arrow"></i> code</button></a>
+                 </div>
                  <div class="project">
                         <h1>meteo</h1>
                         <h3>a simple weather web-app, build using yahoo's weather api</h3>
@@ -130,15 +144,15 @@
                  </div>
 
                  <div class="project">
-                        <h1>social</h1>
-                        <h3>a social networking profile page template</h3>
+                        <h1>zucc</h1>
+                        <h3>a desktop voice-controlled personal assistant (under construction...)</h3>
                         <a href="https://imfunniee.github.io/social/" target="_blank"><button>visit <i class="fas fa-long-arrow-alt-right right-arrow"></i></button></a>
                         <a href="https://github.com/imfunniee/imfunniee.github.io/tree/master/social" target="_blank"><button><i class="fas fa-code right-arrow"></i> code</button></a>
                  </div>
 
                  <div class="project">
                         <h1>travel</h1>
-                        <h3>a travel website layout/template/idea (under construction)</h3>
+                        <h3>a travel website layout/template/idea (under construction...)</h3>
                         <a href="https://imfunniee.github.io/travel/" target="_blank"><button>visit <i class="fas fa-long-arrow-alt-right right-arrow"></i></button></a>
                         <a href="https://github.com/imfunniee/imfunniee.github.io/tree/master/travel" target="_blank"><button><i class="fas fa-code right-arrow"></i> code</button></a>
                  </div>
@@ -195,7 +209,6 @@
              </div>
              <center><b>made on earth by a human</b></center>
     </div>
-</div>
 <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
 <script src="index.js" type="text/JavaScript"></script>
 <script type="text/JavaScript">
@@ -205,7 +218,7 @@
     smartBackspace: true,
     backSpeed: 26,
     showCursor: false,
-    startDelay: 220
+    startDelay: 2400
    });
    $(document).ready(function(){
     $("a").on('click', function(event) {
