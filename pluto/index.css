@@ -1,0 +1,89 @@
+body{
+    font-family: 'Montserrat', sans-serif;
+    padding:0;
+    margin:0;
+}
+#main{
+    width:60%;
+    padding:2% 20%;
+    font-size:16px;
+    font-weight:bold;
+    float:none;
+    transition:0.4s ease-in-out;
+}
+#main div {
+    margin:14px 0px;
+    color:#444444;
+    font-size:18px;
+}
+h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size:60px;
+}
+textarea {
+    border:0px;
+    width:80%;
+    resize:none;
+    border-bottom:2px solid rgba(68,68,68,0.5);
+    font-family: 'Montserrat', sans-serif;
+    font-size:16px;
+    font-weight:bold;
+    padding:12px 16px;
+    transition:0.4s ease-in-out;
+}
+textarea:focus{
+    outline:none;
+    border-bottom:2px solid rgba(68,68,68,1);
+}
+button {
+    background:transparent;
+    border:2px solid #444444;
+    padding:6px 20px;
+    font-family:  'Montserrat', sans-serif;
+    font-size:16px;
+    font-weight:bold;
+    color:#444444;
+    border-radius:50px;
+    margin:20px 0px;
+    transition:0.4s ease-in-out;
+    width:120px;
+}
+button:focus{
+    outline:none;
+}
+button:hover {
+    background:#444444;
+    color:#fff;
+    cursor:pointer;
+}
+#main-main {
+    float:right;
+    width:40%;
+    padding:5%;
+    position:fixed;
+    right:0;
+}
+#video{
+    width:100%;
+    background:#444444;
+    border-radius:10px;
+}
+#yourmessage {
+    margin-top:15px;
+}
+#send_container {
+    transition:0.4s ease-in-out;
+}
+#messages {
+    width:100%;
+    max-height:40vh;
+    overflow:auto;
+    min-height:40vh;
+    font-weight:bold;
+    margin:16px 0px;
+}
+#idkifthisthingisrequiredbutitisiguess {
+    width:100%;
+    text-align:left;
+    margin-top:10vh;
+}

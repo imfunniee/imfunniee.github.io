@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pluto</title>
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:800" rel="stylesheet">
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+</head>
+<body>
+    <div id="main" class="animated fadeIn">
+        <h1>Pluto</h1>
+    <div>your id:</div>
+      <textarea id="your_id" rows="4"></textarea><br>
+      <div style="display:none" id="ok">copied that!!</div>
+      <button onclick="copy('your_id')">copy id</button>
+      <div>other id:</div>
+      <textarea id="other_id" rows="4"></textarea><br>
+      <button id="connect">connect</button>
+      <label id="send_container" style="display:none;">
+     <div>type your message here</div>
+     <textarea id="yourmessage" rows="4"></textarea><br><button id="send">send</button>
+    </label>
+     <p id="idkifthisthingisrequiredbutitisiguess">
+        made by imfunny with love and a keyboard
+     </p>
+    </div>
+    <div id="main-main" class="animated fadeIn" style="display:none;">
+      <video id="video" poster="no-signal.gif"></video>
+      <div id="messages">
+          Messages : <br>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/simple-peer/9.1.2/simplepeer.min.js"></script>
+    <script type="text/javascript">
+    function copy(id){
+        var copyid = document.getElementById(id);
+        copyid.select();
+        document.execCommand("copy");
+        document.getElementById("ok").style.display = "inherit";
+    }
+    navigator.mediaDevices.getUserMedia({ audio: false, video: true})
+.then(function(stream) {
+    var peer = new SimplePeer({ initiator: location.hash === '#1', trickle: false, stream: stream });
+    peer.on('signal', function(data){
+        document.getElementById("your_id").value = JSON.stringify(data);
+    });
+
+    document.getElementById("connect").addEventListener('click',function(){
+        var otherid = JSON.parse(document.getElementById("other_id").value);
+        peer.signal(otherid);
+        document.getElementById("main").style.width = "40%";
+        document.getElementById("main").style.padding = "2% 5%";
+        document.getElementById("main").style.cssFloat = "left";
+        document.getElementById("main-main").style.display = "inherit";
+        document.getElementById("send_container").style.display = "inherit";
+    });
+    document.getElementById("send").addEventListener('click',function(){
+        var yourmessage = document.getElementById("yourmessage").value;
+        peer.send(yourmessage);
+    });
+    peer.on('data', function(data){
+        document.getElementById("messages").innerHTML += data + '<br>';
+    });
+
+    peer.on('stream', function(stream){
+        var video = document.getElementById('video');
+        video.src = window.URL.createObjectURL(stream);
+        console.log(video.src);
+        video.play();
+    });
+})
+.catch(function(err) {
+    console.log(err);
+});
+    </script>
+</body>
+</html>
