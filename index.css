@@ -3,8 +3,8 @@ body,html{
     margin:0px;
     font-family: 'Comfortaa', cursive;
     font-weight:bold;
-    background:url("https://images.unsplash.com/photo-1498721441674-67b1e1e17a5b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9") center center fixed;
-    background-size:140% 140%;
+    background:url("https://images.unsplash.com/photo-1498036882173-b41c28a8ba34?ixlib=rb-1.2.1&auto=format&fit=crop&q=100") center center fixed;
+    background-size:cover;
     transition:0.8s ease-in-out;
     }
 #header {
