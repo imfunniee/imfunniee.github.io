@@ -4,7 +4,7 @@ body,html{
     font-family: 'Comfortaa', cursive;
     font-weight:bold;
     background:url("https://images.unsplash.com/photo-1498036882173-b41c28a8ba34?ixlib=rb-1.2.1&auto=format&fit=crop&q=100") center center fixed;
-    background-size:cover;
+    background-size:140% auto;
     transition:0.8s ease-in-out;
     }
 #header {
@@ -94,36 +94,8 @@ body,html{
     margin-top:6vh;
 }
 #tagline a{
-    color:white;
     padding:10px 40px;
-    border-radius:50px;
-    border:2px solid transparent;
-    font-size:18px;
-    font-family: 'Comfortaa', cursive;
-    font-weight:bold;
-    background:transparent;
     transition:0.4s ease-in-out;
-    margin:8vh 0px;
-    text-decoration:none;
-    position:relative;
-    animation: updown 3s infinite linear;
-}
-@keyframes updown{
-    0% {
-        top:0;
-    }
-    25% {
-        top:-1vh;
-    }
-    50% {
-        top:0;
-    }
-    75% {
-        top:1vh;
-    }
-    100% {
-        top:0;
-    }
 }
 #tagline a:hover{
     transform:scale(1.1);

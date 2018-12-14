@@ -21,8 +21,8 @@ setTimeout(function(){
 
 window.onscroll = function(){
     if(document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-        document.body.style.backgroundSize = "100% 100%";
+        document.body.style.backgroundSize = "100% auto";
     }else{
-        document.body.style.backgroundSize = "140% 140%";
+        document.body.style.backgroundSize = "140% auto";
     }
 };
