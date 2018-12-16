@@ -171,7 +171,7 @@ $(document).ready(() => {
         $("#loading").css("display","none");
         $("#loading").removeClass("animated fadeOut");
         },800);
-    },4000)
+    },2800)
 });
 
 function showstar(starid){
