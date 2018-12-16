@@ -101,7 +101,7 @@ function send(){
                 $('#error').html("");
                 $("#error").removeClass("animated fadeOut");
             },800);
-        },6000);
+        },3000);
         $('#send').attr("disabled",false);
     })
     .catch((error) => {
