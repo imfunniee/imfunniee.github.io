@@ -18,6 +18,17 @@ for(i = 0; i < data.length; i++){
 }
 });
 
+var doneids = [];
+
+function findObjectByKey(array, key, value) {
+    for (var i = 0; i < array.length; i++) {
+        if (array[i][key] === value) {
+            return array[i];
+        }
+    }
+    return null;
+}
+
 db.collection("movie").orderBy("starRate","desc")
 .onSnapshot(function(querySnapshot){
     if(querySnapshot.empty == false){
@@ -31,8 +42,11 @@ db.collection("movie").orderBy("starRate","desc")
     querySnapshot.forEach(function(doc){
         iDs.push(doc.data().movieId);
     });
+
     $.getJSON("https://raw.githubusercontent.com/FEND16/movie-json-data/master/json/movies-coming-soon.json",function(data){
         for(i = 0; i < iDs.length; i++){
+        var result = findObjectByKey(doneids, 'done', iDs[i]) === null;
+        if(result == true){
             var id = Number(iDs[i])-1;
             var url = data[id].posterurl;
             url = url.toString().split("_");
@@ -50,6 +64,8 @@ db.collection("movie").orderBy("starRate","desc")
             </a>
             `);
         }
+        doneids.push({done:iDs[i]});
+    }
     });
 });
 
