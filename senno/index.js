@@ -76,5 +76,5 @@ $(document).ready(() => {
         $("#loading").css("display","none");
         $("#loading").removeClass("animated fadeOut");
         },800);
-    },4500)
+    },3000)
 });
