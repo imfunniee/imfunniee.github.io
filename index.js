@@ -12,17 +12,29 @@ function showweb(){
 }
 
 setTimeout(function(){
-    $("#loading").addClass("animated fadeOut");
+    $("#text").addClass("animated fadeOut");
     setTimeout(function(){
-        $("#loading").removeClass("animated fadeOut");
+        $("#text").removeClass("animated fadeOut");
+        $("#text").css("display", "none");
+    },800);
+},3000);
+
+setTimeout(function(){
+    $("#leftThingy").addClass("animated slideOutLeft");
+    $("#RightThingy").addClass("animated slideOutRight");
+    setTimeout(function(){
+        $("#leftThingy").removeClass("animated slideOutLeft");
+        $("#RightThingy").removeClass("animated slideOutRight");
+        $("#leftThingy").css("display", "none");
+        $("#RightThingy").css("display", "none");
         $("#loading").css("display", "none");
     },800);
-},2000);
+},3800);
 
 window.onscroll = function(){
     if(document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-        document.body.style.backgroundSize = "100% auto";
+        document.body.style.backgroundSize = "150% auto";
     }else{
-        document.body.style.backgroundSize = "140% auto";
+        document.body.style.backgroundSize = "100% auto";
     }
 };

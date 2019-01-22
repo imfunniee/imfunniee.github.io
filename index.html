@@ -4,17 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="description" content="hi imfunny, a Junior front-end developer and UI/UX Designer who’s comfortable with the server-side." property="og:title">
+    <meta name="description" content="hi imfunny, a Front-end developer and UI/UX Designer who’s comfortable with the server-side." property="og:title">
     <meta name="keywords" content="FrontEnd Developer,UI/UX Designer,Backend,Designer,HTML5,CSS3,JavaScript,website, Web Dev">
     <meta name="author" content="imfunny">
     <meta property="og:title" content="imfunny.">
     <meta property="og:type" content="website">
-    <meta property="og:description" content="hi imfunny, a Junior front-end developer and UI/UX Designer who’s comfortable with the server-side." />
+    <meta property="og:description" content="hi imfunny, a Front-end developer and UI/UX Designer who’s comfortable with the server-side." />
     <meta property="og:image" content="https://imfunniee.github.io/og.png">
     <meta property="og:url" content="https://imfunniee.github.io/">
     <meta property="twitter:card" content="summary">
     <meta property="twitter:title" content="imfunny.">
-    <meta property="twitter:description" content="hi imfunny, a Junior front-end developer and UI/UX Designer who’s comfortable with the server-side." />
+    <meta property="twitter:description" content="hi imfunny, a Front-end developer and UI/UX Designer who’s comfortable with the server-side." />
     <meta property="twitter:image" content="https://imfunniee.github.io/og.png">
     <meta property="twitter:url" content="https://imfunniee.github.io/">
     <link rel="icon" href="https://imfunniee.github.io/icon.png" type="image/png" />
@@ -29,12 +29,16 @@
 </head>
 <body id="body">
 <div id="loading">
+    <div id="leftThingy"></div>
+    <div id="RightThingy"></div>
+    <div id="text">
     <h1>imfunny.</h1>
     <div id="spinner"></div>
 </div>
+</div>
     <center>
     <div id="middle">
-            <div id="header" class="animated bounceInDown" style="animation-delay:2.4s;">
+            <div id="header" class="animated bounceInDown" style="animation-delay:4s;">
                     <div id="title">imfunny.</div><br>
                     <div id="links">
                         <a href="#about">skills</a>
@@ -111,9 +115,10 @@
                     <span onclick="showdes()" id="des-btn">designs.</span></h1>
                  <div id="web">
                   <div class="project">
-                      <h1>wybemf</h1>
-                          <h3>a platform to connect dreamers (dream project)</h3>
+                          <h1>wybemf</h1>
+                          <h3>open source platform to connect dreamers (my dream project)</h3>
                           <a href="https://wybemfapp.firebaseapp.com/" target="_blank"><button>visit <i class="fas fa-long-arrow-alt-right right-arrow"></i></button></a>
+                          <a href="https://github.com/imfunniee/wybemf" target="_blank"><button><i class="fas fa-code right-arrow"></i> code</button></a>
                   </div>
                  <div class="project">
                         <h1>senno</h1>
@@ -165,9 +170,6 @@
 
                 <div id="design" style="display:none;">
                     <div class="project">
-                        <img src="https://cdn.dribbble.com/users/2574485/screenshots/5804731/wybemf.png">
-                    </div>
-                    <div class="project">
                         <img src="https://cdn.dribbble.com/users/2574485/screenshots/5424634/nav-micro.gif">
                     </div>
                     <div class="project">
@@ -188,6 +190,9 @@
                      <div class="project">
                             <img src="https://cdn.dribbble.com/users/2574485/screenshots/5357543/custom_size___1_4x.png">
                         </div>
+                        <div class="project">
+                         <img src="https://cdn.dribbble.com/users/2574485/screenshots/5348291/web_1920___1_4x.png">
+                     </div>
                      <div class="project">
                          <img src="https://cdn.dribbble.com/users/2574485/screenshots/5337203/web_1920___1_4x.png">
                      </div>
@@ -212,12 +217,12 @@
 <script src="index.js" type="text/JavaScript"></script>
 <script type="text/JavaScript">
     var typed = new Typed('#typehere', {
-    strings: ["hi imfunny, a front-end developer and UI/UX Designer who’s comfortable with the server-side.<br><a href='#portfolio'><img src='https://www.sarikllc.com/wp-content/uploads/2017/02/scroll-downwhite.gif' style='width:150px;height:auto;margin-top:4vh;'></a>"],
-    typeSpeed: 22,
+    strings: ["hi imfunny, a <span>Front-end Developer</span> and <span>UI/UX Designer</span> who’s comfortable with the <span>server-side</span>.<br><a href='#portfolio'><img src='https://www.sarikllc.com/wp-content/uploads/2017/02/scroll-downwhite.gif' style='width:150px;height:auto;margin-top:4vh;'></a>"],
+    typeSpeed: 35,
     smartBackspace: true,
-    backSpeed: 26,
+    backSpeed: 28,
     showCursor: false,
-    startDelay: 2400
+    startDelay: 4400
    });
    $(document).ready(function(){
     $("a").on('click', function(event) {
