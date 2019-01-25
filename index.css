@@ -43,7 +43,7 @@ body,html{
     width: 100%;
     height: 100vh;
     position: fixed;
-    z-index: 9999;
+    z-index: 99;
     align-items: center;
     font-family: 'Poppins', sans-serif;
 }
@@ -78,10 +78,10 @@ body,html{
 
 #spinner {
     animation: rotate 0.8s infinite linear;
-    width:28px;
-    height:28px;
+    width:30px;
+    height:30px;
     border:5px solid #000;
-    border-bottom:5px solid white;
+    border-bottom: 5px solid white;
     border-radius:50%;
     margin: 0px auto;
 }
@@ -106,11 +106,13 @@ body,html{
     transition:0.4s ease-in-out;
     z-index:4;
 }
+
 #tagline {
     font-size:50px;
     width:60%;
     margin-top:6vh;
 }
+
 #tagline span {
     background-image:linear-gradient(-225deg, rgb(56, 141, 250) 0%, rgb(159, 89, 242) 29%, rgb(245, 47, 98) 67%, rgb(245, 194, 47) 100%);
     -webkit-background-clip:text;
@@ -123,17 +125,21 @@ body,html{
     animation: Gradient 100s ease infinite;
     font-family: 'Comfortaa', cursive;
 }
+
 #portfolio {
     background:white;
     width:84%;
     padding:5% 8%;
 }
+
 #portfolio div {
     font-size:20px;
 }
+
 #about,#work,#contact {
     padding:2vh 0px;
 }
+
 #work h1 span {
     margin:10px 20px;
     border-bottom:4px solid transparent;
@@ -162,12 +168,11 @@ body,html{
     padding-left:0px !important;
 }
 .project {
-    width:40%;
+    width:515px;
     height:auto;
-    border-radius:8px;
-    margin:3vh 2%;
+    margin:3vh 15px;
     display:inline-block;
-    padding:4vh 2vw;
+    padding:4vh 25px;
     color:#282828;
     border-radius:8px;
     box-shadow:0px 0px 2px #d1d1d1;
@@ -176,7 +181,7 @@ body,html{
 }
 .project:hover {
     transform:scale(1.06);
-    box-shadow:0px 4px 8px #d1d1d1;
+    box-shadow:0px 0px 8px #d1d1d1;
 }
 .project button {
     background:transparent;
@@ -194,34 +199,42 @@ body,html{
 .right-arrow {
     font-size:18px;
     margin-left:2px;
-    }
+}
+
 .project button:hover{
     cursor:pointer;
     box-shadow:0px 6px 16px #bbbbbb;
 }
+
 .project button:focus{
     box-shadow:inset 0px 6px 10px #bbbbbb;
     outline:none;
 }
+
 .project img {
     width:100%;
     height:auto;
     border-radius:10px;
 }
+
 ::-webkit-scrollbar {
     width:5px;
     height:5px;
 }
+
 ::-webkit-scrollbar-track {
     background:#000; 
 }
+
 ::-webkit-scrollbar-thumb {
     background:#fff; 
 }
+
 #details {
     width:100%;   
     text-align:left;
 }
+
 #details a {
     font-size:24px;
     color:#282828;
@@ -231,10 +244,67 @@ body,html{
     border-radius:50%;
     transition:0.4s ease-in-out;
 }
+
 #details a:hover {
     box-shadow:0px 6px 10px #d5d5d5;
 }
-@media (max-width: 800px){
+
+#design .project:hover {
+    cursor: pointer;
+}
+
+#inlarge {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    background:rgba(0, 0, 0, 0.8);
+    justify-content:center;
+    flex-direction:column;
+    display:none;
+    z-index:9999;
+}
+
+#inlarge button {
+    background:transparent;
+    color:#fff;
+    padding:10px 10px;
+    border-radius:50%;
+    margin:3vh 3vw;
+    border:0px;
+    font-size:28px;
+    position: absolute;
+    transition:0.4s ease-in-out;
+    top:0;
+    right:0;
+}
+
+#inlarge button:hover {
+    cursor: pointer;
+    transform:scale(1.2);
+}
+
+#inlarge button:focus {
+    outline:none;
+}
+
+#img_container {
+    width:55vw;
+    height:auto;
+    background:#fff;
+    margin:0px auto;
+    border-radius:8px;
+    padding:15px 18px;
+}
+
+#img_container img {
+    width:100%;
+    height:auto;
+    border-radius:8px;
+    padding:0px;
+    margin:0px;
+}
+
+@media (max-width: 980px){
     body {
         background-size:cover !important;
         background-repeat:no-repeat;
@@ -267,8 +337,8 @@ body,html{
         text-align:center;
     }
     #about table tr td {
-        padding:8px 15px !important;
-        margin:15px 10px;
+        padding:8px 10px !important;
+        margin:10px 5px;
         display:inline-block;
     }
     #details {
@@ -287,16 +357,30 @@ body,html{
         width:100%;
     }
     .project {
-        width:90%;
-        padding:5vh 5vw;
-        margin:2vh 0px;
+        width:96%;
+        padding:15px 3vw;
+        margin:2vh 0px !important;
+        font-size:14px !important; 
     }
     #contact {
         width:100%;
         text-align:center;
     }
+    .project button {
+        font-size:14px;
+    }
+    .right-arrow {
+        font-size:12px;
+    }
+    #img_container  {
+        width:100vw;
+        padding:15px 0px !important;
+    }
     #work h1 span{
         font-size:24px;
+    }
+    #in_mobile {
+        margin:6vh 0px;
     }
 
 }

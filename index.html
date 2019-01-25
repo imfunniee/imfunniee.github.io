@@ -36,6 +36,12 @@
     <div id="spinner"></div>
 </div>
 </div>
+<div id="inlarge">
+    <button onclick="takeitback()"><i class="fas fa-times"></i></button>
+    <div id="img_container">
+        <img src="" id="thischangesxD">
+    </div>
+</div>
     <center>
     <div id="middle">
             <div id="header" class="animated bounceInDown" style="animation-delay:4s;">
@@ -111,14 +117,13 @@
          
               <div id="work">
                  <p>works.</p>
-                 <h1><span id="web-btn" style="border-bottom:4px solid #000;" onclick="showweb()">web work.</span>
+                 <h1><span id="web-btn" style="border-bottom:3px solid #000;" onclick="showweb()">web work.</span>
                     <span onclick="showdes()" id="des-btn">designs.</span></h1>
                  <div id="web">
                   <div class="project">
                           <h1>wybemf</h1>
-                          <h3>open source platform to connect dreamers (my dream project)</h3>
+                          <h3>a social networking platform to connect dreamers and achievers</h3>
                           <a href="https://wybemfapp.firebaseapp.com/" target="_blank"><button>visit <i class="fas fa-long-arrow-alt-right right-arrow"></i></button></a>
-                          <a href="https://github.com/imfunniee/wybemf" target="_blank"><button><i class="fas fa-code right-arrow"></i> code</button></a>
                   </div>
                  <div class="project">
                         <h1>senno</h1>
@@ -132,7 +137,12 @@
                         <a href="https://imfunniee.github.io/meteo/" target="_blank"><button>visit <i class="fas fa-long-arrow-alt-right right-arrow"></i></button></a>
                         <a href="https://github.com/imfunniee/meteo" target="_blank"><button><i class="fas fa-code right-arrow"></i> code</button></a>
                  </div>
-
+                 <div class="project">
+                    <h1>pluto</h1>
+                    <h3>a peer to peer video and text chat web app</h3>
+                    <a href="https://imfunniee.github.io/pluto/" target="_blank"><button>visit <i class="fas fa-long-arrow-alt-right right-arrow"></i></button></a>
+                    <a href="https://github.com/imfunniee/pluto" target="_blank"><button><i class="fas fa-code right-arrow"></i> code</button></a>
+                 </div>
                  <div class="project">
                         <h1>todo list</h1>
                         <h3>a web-app to organize how to do the things you want to do</h3>
@@ -169,38 +179,49 @@
                 </div>
 
                 <div id="design" style="display:none;">
-                    <div class="project">
+                    <div class="project" onclick="inlarge('https://cdn.dribbble.com/users/2574485/screenshots/5866805/whatsapp_2x.png')">
+                        <img src="https://cdn.dribbble.com/users/2574485/screenshots/5866805/whatsapp_2x.png">
+                    </div>
+                    <div class="project" onclick="inlarge('https://cdn.dribbble.com/users/2574485/screenshots/5855886/1_2x.png')">
+                        <img src="https://cdn.dribbble.com/users/2574485/screenshots/5855886/1_2x.png">
+                    </div>
+                    <div class="project" onclick="inlarge('https://cdn.dribbble.com/users/2574485/screenshots/5804731/wybemf_2x.png')">
+                        <img src="https://cdn.dribbble.com/users/2574485/screenshots/5804731/wybemf_2x.png">
+                    </div>
+                    <div class="project" onclick="inlarge('https://cdn.dribbble.com/users/2574485/screenshots/5424634/nav-micro.gif')">
                         <img src="https://cdn.dribbble.com/users/2574485/screenshots/5424634/nav-micro.gif">
                     </div>
-                    <div class="project">
+                    <div class="project" onclick="inlarge('https://cdn.dribbble.com/users/2574485/screenshots/5424125/youtube_4x.png')">
                         <img src="https://cdn.dribbble.com/users/2574485/screenshots/5424125/youtube_4x.png">
                     </div>
-                    <div class="project">
+                    <div class="project" onclick="inlarge('https://cdn.dribbble.com/users/2574485/screenshots/5389842/facebook1_4x.png')">
                         <img src="https://cdn.dribbble.com/users/2574485/screenshots/5389842/facebook1_4x.png">
                     </div>
-                     <div class="project">
+                     <div class="project" onclick="inlarge('https://cdn.dribbble.com/users/2574485/screenshots/5380746/srch.gif')">
                          <img src="https://cdn.dribbble.com/users/2574485/screenshots/5380746/srch.gif">
                      </div>
-                     <div class="project">
+                     <div class="project" onclick="inlarge('https://cdn.dribbble.com/users/2574485/screenshots/5377526/lol_4x.png')">
                          <img src="https://cdn.dribbble.com/users/2574485/screenshots/5377526/lol_4x.png">
                      </div>
-                     <div class="project">
+                     <div class="project" onclick="inlarge('https://cdn.dribbble.com/users/2574485/screenshots/5375361/custom_size___1_4x.png')">
                          <img src="https://cdn.dribbble.com/users/2574485/screenshots/5375361/custom_size___1_4x.png">
                      </div>
-                     <div class="project">
+                     <div class="project" onclick="inlarge('https://cdn.dribbble.com/users/2574485/screenshots/5357543/custom_size___1_4x.png')">
                             <img src="https://cdn.dribbble.com/users/2574485/screenshots/5357543/custom_size___1_4x.png">
                         </div>
-                        <div class="project">
+                        <div class="project" onclick="inlarge('https://cdn.dribbble.com/users/2574485/screenshots/5348291/web_1920___1_4x.png')">
                          <img src="https://cdn.dribbble.com/users/2574485/screenshots/5348291/web_1920___1_4x.png">
                      </div>
-                     <div class="project">
+                     <div class="project" onclick="inlarge('https://cdn.dribbble.com/users/2574485/screenshots/5337203/web_1920___1_4x.png')">
                          <img src="https://cdn.dribbble.com/users/2574485/screenshots/5337203/web_1920___1_4x.png">
                      </div>
-                     <div class="project">
+                     <div class="project" onclick="inlarge('https://cdn.dribbble.com/users/2574485/screenshots/5334214/twitch_4x.png')">
                          <img src="https://cdn.dribbble.com/users/2574485/screenshots/5334214/twitch_4x.png">
                      </div>
+                     <div class="project" onclick="inlarge('https://cdn.dribbble.com/users/2574485/screenshots/5318569/jk.gif')">
+                        <img src="https://cdn.dribbble.com/users/2574485/screenshots/5318569/jk.gif">
+                    </div>
                 </div>
-
              </div>
          
               <div id="contact">
@@ -211,7 +232,7 @@
                        <a href="https://dribbble.com/imfunny" target="_blank"><i class="fab fa-dribbble what-second-div"></i></a>
                  </div>   
              </div>
-             <center><b>made on earth by a human</b></center>
+             <center id="in_mobile"><b>made on earth by a human</b></center>
     </div>
 <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
 <script src="index.js" type="text/JavaScript"></script>
