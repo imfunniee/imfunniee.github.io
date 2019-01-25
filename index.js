@@ -20,11 +20,11 @@ setTimeout(function(){
 },3000);
 
 setTimeout(function(){
-    $("#leftThingy").addClass("animated slideOutUp");
-    $("#RightThingy").addClass("animated slideOutDown");
+    $("#leftThingy").addClass("animated slideOutLeft");
+    $("#RightThingy").addClass("animated slideOutRight");
     setTimeout(function(){
-        $("#leftThingy").removeClass("animated slideOutUp");
-        $("#RightThingy").removeClass("animated slideOutDown");
+        $("#leftThingy").removeClass("animated slideOutLeft");
+        $("#RightThingy").removeClass("animated slideOutRight");
         $("#leftThingy").css("display", "none");
         $("#RightThingy").css("display", "none");
         $("#loading").css("display", "none");
