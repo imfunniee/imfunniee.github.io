@@ -26,7 +26,7 @@ var circle4 = new ProgressBar.Circle(`#seconds`, {
     duration: 1400,
     strokeWidth: 6,
 });
-var countDownDate = new Date("Jan 25, 2019 00:00:00").getTime();
+var countDownDate = new Date("Dec 25, 2019 00:00:00").getTime();
 var start = new Date('Dec 25, 2018 00:00:00').getTime();
 var x = setInterval(function() {
     var now = new Date().getTime();
@@ -76,4 +76,4 @@ setTimeout(function(){
     $("#loading").css("display","none");
     $("#loading").removeClass("animated fadeOut");
 },800);
-},1600);
+},1500);

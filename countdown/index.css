@@ -9,11 +9,24 @@ body {
     justify-content:center;
     font-family: 'Poppins', sans-serif;
     font-weight:bold;
+    background:rgb(14, 14, 14);
+    color:#fff;
+}
+#background {
+    width:100vw;
+    height:100vh;
+    background:linear-gradient(0deg,rgba(14,14,14,0.6),rgba(14,14,14,0.6)),url("https://images.unsplash.com/photo-1450198342040-c32e6d1ef2e4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1189&q=80") center center;
+    background-size:cover;
+    background-repeat:no-repeat;
+    z-index:-2;
+    position:fixed;
+    filter:blur(10px);
+    transform:scale(1.2);
 }
 #days {
     width:360px;
     height:360px;
-    background:url("https://wallpapertag.com/wallpaper/full/4/0/c/10664-kingdom-hearts-wallpaper-1920x1080-pc.jpg") center center;
+    background:url("https://images.unsplash.com/photo-1450198342040-c32e6d1ef2e4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1189&q=80") center center;
     background-size:cover;
     background-repeat:no-repeat;
     border-radius:50%;
@@ -74,7 +87,7 @@ body {
 	width: 100%;
 	height: 100vh;
 	position: fixed;
-	background: white;
+	background:rgb(14, 14, 14);
 	z-index: 9999;
 	display: flex;
 	justify-content: center;
@@ -84,10 +97,10 @@ body {
 
 #spinner {
 	animation: rotate 1s infinite linear;
-	width: 40px;
-	height: 40px;
-	border: 14px solid #282828;
-	border-bottom: 14px solid white;
+	width: 60px;
+	height: 60px;
+	border: 14px solid #fff;
+	border-bottom: 14px solid rgb(14, 14, 14);
 	border-radius: 100px;
 	margin: 0;
 }
