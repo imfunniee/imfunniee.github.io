@@ -4,4 +4,4 @@ setTimeout(function(){
     $("#loading").css("display","none");
     $("#loading").removeClass("animated fadeOut");
 },800);
-},1500);
+},1800);
