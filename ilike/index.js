@@ -50,6 +50,10 @@ function count4user(givedata){
 
 function like(){
     if(languageishere.length > 0 && userishere.length > 0){
+        if (languageishere[0] == undefined && userishere[0] == undefined){
+            $("#container").html(`<h1>nothing to show here</h1>`);
+            return;
+        }
         if (languageishere[0] == undefined){
             var username = userishere[0];
             $.getJSON(`https://api.github.com/users/${username}`, function(userdata) {
