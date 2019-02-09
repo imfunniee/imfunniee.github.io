@@ -57,6 +57,13 @@ function like(){
             });
             return;
         }
+        if (userishere[0] == undefined){
+            var username = userishere[0];
+            $.getJSON(`https://api.github.com/users/${username}`, function(userdata) {
+                $("#container").html(`<h1>I <i class="fas fa-heart heart animated infinite heartBeat"></i>  ${languageishere[0]} </h1>`);
+            });
+            return;
+        }
     var username = userishere[0];
     $.getJSON(`https://api.github.com/users/${username}`, function(userdata) {
         $("#container").html(`<h1>I <i class="fas fa-heart heart animated infinite heartBeat"></i> ${languageishere[0]} & <a href="https://github.com/${username}"><section style="background:url('${userdata.avatar_url}') center center;"></section></a></h1>`);
