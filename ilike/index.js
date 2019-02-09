@@ -3,7 +3,8 @@ var items = [];
 var starred = [];
 var language;
 var user;
-var dataishere = [];
+var languageishere = [];
+var userishere = [];
 
 function count(givedata){
     var y = 1;
@@ -22,24 +23,43 @@ function count(givedata){
             }
             x=0;
     }
-    dataishere.push(language);
-    if(dataishere.length == 2){
-        like();
+    languageishere.push(language);
+    like();
+}
+
+function count4user(givedata){
+    var y = 1;
+    var x = 0;
+    for (var i=0;i < givedata.length;i++)
+    {
+            for (var z=i; z < givedata.length; z++)
+            {
+                    if (givedata[i] == givedata[z])
+                     x++;
+                    if (y<x)
+                    {
+                      y=x; 
+                      user = givedata[i];
+                    }
+            }
+            x=0;
     }
+    userishere.push(user);
+    like();
 }
 
 function like(){
-    if(dataishere.length == 2){
-        if (dataishere[0] == undefined){
-            var username = dataishere[1];
+    if(languageishere.length > 0 && userishere.length > 0){
+        if (languageishere[0] == undefined){
+            var username = userishere[0];
             $.getJSON(`https://api.github.com/users/${username}`, function(userdata) {
                 $("#container").html(`<h1>I <i class="fas fa-heart heart animated infinite heartBeat"></i><a href="https://github.com/${username}"><section style="background:url('${userdata.avatar_url}') center center;"></section></a></h1>`);
             });
             return;
         }
-    var username = dataishere[1];
+    var username = userishere[0];
     $.getJSON(`https://api.github.com/users/${username}`, function(userdata) {
-        $("#container").html(`<h1>I <i class="fas fa-heart heart animated infinite heartBeat"></i> ${dataishere[0]} & <a href="https://github.com/${username}"><section style="background:url('${userdata.avatar_url}') center center;"></section></a></h1>`);
+        $("#container").html(`<h1>I <i class="fas fa-heart heart animated infinite heartBeat"></i> ${languageishere[0]} & <a href="https://github.com/${username}"><section style="background:url('${userdata.avatar_url}') center center;"></section></a></h1>`);
     });
     }
 }
@@ -50,6 +70,9 @@ if(!getinfofor){
     return;
 }else{
     $.getJSON(`https://api.github.com/users/${getinfofor}`, function(userdata) {
+        if(!userdata.bio){
+            $("#about").css("display","none");
+        }
         $("#profile").html(`
         <table style="width:100%">
                 <tr>
@@ -89,7 +112,7 @@ $.getJSON(`https://api.github.com/users/${getinfofor}/starred`, function(data) {
     for(var i=0;i < data.length;i++){
         starred.push(data[i].owner.login);
     }
-    count(starred);
+    count4user(starred);
 });
 }
 }
