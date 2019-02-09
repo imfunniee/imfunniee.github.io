@@ -24,6 +24,12 @@ function count(givedata){
     }
     dataishere.push(language);
     if(dataishere.length == 2){
+        like();
+    }
+}
+
+function like(){
+    if(dataishere.length == 2){
         if (dataishere[0] == undefined){
             var username = dataishere[1];
             $.getJSON(`https://api.github.com/users/${username}`, function(userdata) {
