@@ -91,7 +91,7 @@ if(!getinfofor){
                         <div id="profile-image" style="background:url('${userdata.avatar_url}') center center"></div>
                     </td>
                     <td id="userdata">
-                        <div id="username">@${userdata.login} <a href="https://github.com/${userdata.avatar_url}"><button><i class="fab fa-github"></i> GitHub</button></a></div>
+                        <div id="username">@${userdata.login} <a href="https://github.com/${userdata.login}"><button><i class="fab fa-github"></i> GitHub</button></a></div>
                         <div id="about">
                         ${userdata.bio}
                         </div>
