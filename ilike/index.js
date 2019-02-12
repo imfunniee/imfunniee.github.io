@@ -81,7 +81,7 @@ if(!getinfofor){
     return;
 }else{
     $.getJSON(`https://api.github.com/users/${getinfofor}`, function(userdata) {
-        if(!userdata.bio){
+        if(userdata.bio == null){
             $("#about").css("display","none");
         }
         $("#profile").html(`
