@@ -97,6 +97,19 @@ footer {
     color:#fff;
 }
 
+::-webkit-scrollbar {
+    width:5px;
+    height:5px;
+}
+
+::-webkit-scrollbar-track {
+    background:#000; 
+}
+
+::-webkit-scrollbar-thumb {
+    background:#fff; 
+}
+
 @-webkit-keyframes Gradient {
 0% {background-position: 0% 50%}
 50% {background-position: 100% 50%}
