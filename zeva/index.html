@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>zeva</title>
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div id="bottom-video">
+        <video src="video.mp4" width="auto" height="105%" autoplay="autoplay" muted></video>
+    </div>
+    <div id="top-part">
+        <div><b>zeva.</b></div>
+        <h2>yet another minimalist  ui framework</h2>
+        <button class="button filled rounded" style="margin:4vh auto;">Get Started</button>
+    </div>
+    <div id="container-cool">
+            <h2>full project coming soon...</h2>
+        <div class="insider what">
+            <heading>what zeva is?</heading>
+            <p>
+                zeva is <span id="is"></span>
+            </p>
+        </div>
+        <div class="insider what">
+            <heading>what zeva isn't?</heading>
+            <p>
+                zeva isn't <span id="isnt"></span>
+            </p>
+        </div>
+
+        <div id="start" class="insider">
+            <heading>getting started</heading>
+            <p>
+                Ways to get zeva to your projects
+            </p>
+            <div class="box">
+                <h2>Download Zip</h2>
+                <div class="source">coming soon...</div>
+            </div>
+            <div class="box">
+                <h2>Raw Git</h2>
+                <div class="source">coming soon...</div>
+            </div>
+            <div class="box">
+                <h2>Include this for using icons</h2>
+                <h4>Icons provided by fontawesome</h4>
+                <div class="source"><b><</b>link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"></div>
+            </div>
+        </div>
+
+        <div id="components" class="insider">
+            <heading>components</heading>
+            <p>Typography</p>
+            <h1>This is a heading <small>This is a sub heading</small></h1>
+            <h2>This is a heading <small>This is a sub heading</small></h2>
+            <h3>This is a heading <small>This is a sub heading</small></h3>
+            <h4>This is a heading <small>This is a sub heading</small></h4>
+            <h5>This is a heading <small>This is a sub heading</small></h5>
+            <h6>This is a heading <small>This is a sub heading</small></h6>
+            <br>
+            <script src="https://gist.github.com/imfunniee/9f588a21023f9653c034a15f25f66e1d.js"></script>
+
+            <p>Buttons</p>
+            <h3 class="sub">simple buttons</h3>
+            <button class="button">simple button</button>
+            <button class="button filled">filled button</button>
+            <button class="button rounded">rounded button</button>
+            <button class="button rounded filled">rounded filled button</button>
+
+            <h3 class="sub">button size</h3>
+            <button class="button small">small button</button>
+            <button class="button">normal button</button>
+            <button class="button big">big button</button>
+
+            <h3 class="sub">danger buttons</h3>
+            <button class="button danger">danger button</button>
+            <button class="button rounded danger">danger button rounded</button>
+            <button class="button danger-filled">danger button filled</button>
+
+            <h3 class="sub">buttons with icon</h3>
+            <button class="button">Search &nbsp; <i class="fas fa-search"></i></button>
+            <button class="button rounded filled">Download button &nbsp; <i class="fas fa-download"></i></button>
+            <button class="button danger-filled rounded"><i class="fas fa-skull-crossbones"></i> &nbsp; danger button</button>
+            <p></p>
+            <script src="https://gist.github.com/imfunniee/d9262c4d45b9c79e0c86153a4b8f739a.js"></script>
+
+            <p>Forms</p>
+            <h3 class="sub">Input Fields</h3>
+            <input type="text" class="input" placeholder="deafult input field">
+            <input type="text" class="input" placeholder="another deafult input field">
+            <input type="text" class="input full" placeholder="full-width input field">
+            <input type="text" class="input full bordered" placeholder="full-width bordered input field">
+            <input type="text" class="input full bold" placeholder="full-width bold input field">
+            <input type="text" class="input full bold rounded input-filled" placeholder="full-width bold rounded filled input field">
+            <input type="text" class="input bold rounded bordered" placeholder="bold rounded bordered input field">
+            <input type="text" class="input rounded input-filled" placeholder="rounded filled input field">
+            <p></p>
+            <script src="https://gist.github.com/imfunniee/e05e5ac7d5ca705608ffe49fd8934d48.js"></script>
+
+            <h3 class="sub">Textarea</h3>
+            <textarea class="input" placeholder="this is a textarea"></textarea>
+            <textarea class="input full" placeholder="this is another textarea but longer"></textarea>
+            <h5>tip : you can apply all the classes on a textarea applied on input field</h5>
+
+            <h3 class="sub">Radio Buttons / Checkboxes</h3>
+            <label class="label">Radio button
+                <input type="radio" name="radio">
+                <span class="radio"></span>
+            </label>
+            <label class="label">another radio button
+                <input type="radio" name="radio">
+                <span class="radio"></span>
+            </label>
+            <label class="label">disabled radio button
+                <input type="radio" name="radio" disabled>
+                <span class="radio"></span>
+            </label>
+            <br>
+            <label class="label">A checkbox
+                <input type="checkbox">
+                <span class="checkbox"></span>
+            </label>
+            <label class="label">Another checkbox but checked
+                <input type="checkbox" checked>
+                <span class="checkbox"></span>
+            </label>
+            <label class="label">Disabled checkbox
+                <input type="checkbox" disabled>
+                <span class="checkbox"></span>
+            </label>
+            <p></p>
+            <script src="https://gist.github.com/imfunniee/a0285910232b7e5136658397de8fc8fe.js"></script>
+
+            <h3 class="sub">Select</h3>
+            <select class="input bold">
+                <option>option one</option>
+                <option>option two</option>
+                <option>option three</option>
+                <option>option foour</option>
+            </select>
+            <select class="input bold select-full">
+                <option>option one</option>
+                <option>option two</option>
+                <option>option three</option>
+                <option>option foour</option>
+            </select>
+            <p></p>
+            <script src="https://gist.github.com/imfunniee/85342905dceba8fb5608607f57c7077b.js"></script>
+            <h3>more components coming soon...</h3>
+        </div>
+    </div>
+    <footer><b>made on earth by a human</b></footer>
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
+<script type="text/javascript">
+    var typed = new Typed('#is', {
+    strings: ["modern","easy to use","minimalist","just 2KB in size","easy to learn","a freamework"],
+    typeSpeed: 100,
+    smartBackspace: false,
+    backSpeed: 100,
+    loop:true,
+    backDelay: 2000,
+    showCursor: false,
+    startDelay: 500
+   });
+   var typed = new Typed('#isnt', {
+    strings: ["hard to use","afraid of big projects","an alien"],
+    typeSpeed: 100,
+    smartBackspace: false,
+    backSpeed: 100,
+    loop:true,
+    backDelay: 2000,
+    showCursor: false,
+    startDelay: 500
+   });
+</script>
+</body>
+</html>
