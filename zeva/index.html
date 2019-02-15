@@ -4,10 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="yet another minimalist ui framework">
+    <meta name="keywords" content="minimalist ui framework,ui framework, framework, css framework, new framework">
+    <meta name="author" content="imfunny">
+    <meta property="og:title" content="zeva.">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="yet another minimalist ui framework" />
+    <meta property="og:url" content="https://imfunniee.github.io/zeva">
+    <meta name="theme-color" content="#000"/>
     <title>zeva</title>
     <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
@@ -17,10 +27,11 @@
     <div id="top-part">
         <div><b>zeva.</b></div>
         <h2>yet another minimalist  ui framework</h2>
-        <button class="button filled rounded" style="margin:4vh auto;">Get Started</button>
+        <a href="#start">
+            <button class="button filled rounded" style="margin:4vh auto;">Get Started</button>
+        </a>
     </div>
     <div id="container-cool">
-            <h2>full project coming soon...</h2>
         <div class="insider what">
             <heading>what zeva is?</heading>
             <p>
@@ -41,11 +52,13 @@
             </p>
             <div class="box">
                 <h2>Download Zip</h2>
-                <div class="source">coming soon...</div>
+                <a href="https://github.com/imfunniee/zeva/archive/master.zip">
+                    <button class="button rounded bold"><i class="fas fa-download"></i> &nbsp; Download Zip</button>
+                </a>
             </div>
             <div class="box">
-                <h2>Raw Git</h2>
-                <div class="source">coming soon...</div>
+                <h2>NPM</h2>
+                <div class="source">coming soon</div>
             </div>
             <div class="box">
                 <h2>Include this for using icons</h2>
@@ -57,6 +70,7 @@
         <div id="components" class="insider">
             <heading>components</heading>
             <p>Typography</p>
+            <h2>zeva uses the Poppins font-family, made by <a href="https://github.com/itfoundry">ITF</a> on <a href="https://fonts.google.com/specimen/Poppins">Google fonts</a></h2>
             <h1>This is a heading <small>This is a sub heading</small></h1>
             <h2>This is a heading <small>This is a sub heading</small></h2>
             <h3>This is a heading <small>This is a sub heading</small></h3>
@@ -152,6 +166,7 @@
             </select>
             <p></p>
             <script src="https://gist.github.com/imfunniee/85342905dceba8fb5608607f57c7077b.js"></script>
+            <p></p>
             <h3>more components coming soon...</h3>
         </div>
     </div>
@@ -159,7 +174,7 @@
 <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
 <script type="text/javascript">
     var typed = new Typed('#is', {
-    strings: ["modern","easy to use","minimalist","just 2KB in size","easy to learn","a framework"],
+    strings: ["modern","easy to use","minimalist","easy to learn","a framework"],
     typeSpeed: 100,
     smartBackspace: false,
     backSpeed: 100,
@@ -177,6 +192,19 @@
     backDelay: 2000,
     showCursor: false,
     startDelay: 500
+   });
+   $(document).ready(function(){
+    $("a").on('click', function(event) {
+      if (this.hash !== "") {
+      event.preventDefault();
+      var hash = this.hash;
+      $('body,html').animate({
+      scrollTop: $(hash).offset().top
+      }, 1400, function(){
+      window.location.hash = hash;
+      });
+      } 
+    });
    });
 </script>
 </body>

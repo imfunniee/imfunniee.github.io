@@ -34,10 +34,10 @@ header {
     background-clip:text;
     -webkit-text-fill-color: transparent;
     background-size:500% 500% !important;
-    -webkit-animation: Gradient 20s ease infinite;
-    -moz-animation: Gradient 20s ease infinite;
-    -o-animation: Gradient 20s ease infinite;
-    animation: Gradient 20s ease infinite;
+    -webkit-animation: Gradient 40s ease infinite;
+    -moz-animation: Gradient 40s ease infinite;
+    -o-animation: Gradient 40s ease infinite;
+    animation: Gradient 40s ease infinite;
 }
 
 #container-cool {
@@ -50,6 +50,22 @@ header {
     padding:4vh 10vw;
     color:#fff;
 }
+.insider ~ .gist {
+    background-color:rgb(20,20,20) !important;
+    color:red;
+}
+
+#components a {
+    background-image:linear-gradient(-225deg, rgb(34, 130, 255) 0%, rgb(159, 89, 242) 29%, rgb(245, 47, 98) 67%, rgb(245, 194, 47) 100%);
+    -webkit-background-clip:text;
+    background-clip:text;
+    -webkit-text-fill-color: transparent;
+    background-size:500% 500% !important;
+    -webkit-animation: Gradient 40s ease infinite;
+    -moz-animation: Gradient 40s ease infinite;
+    -o-animation: Gradient 40s ease infinite;
+    animation: Gradient 40s ease infinite;
+}
 
 .insider heading {
     font-size:70px;
@@ -58,10 +74,10 @@ header {
     background-clip:text;
     -webkit-text-fill-color: transparent;
     background-size:500% 500% !important;
-    -webkit-animation: Gradient 20s ease infinite;
-    -moz-animation: Gradient 20s ease infinite;
-    -o-animation: Gradient 20s ease infinite;
-    animation: Gradient 20s ease infinite;
+    -webkit-animation: Gradient 40s ease infinite;
+    -moz-animation: Gradient 40s ease infinite;
+    -o-animation: Gradient 40s ease infinite;
+    animation: Gradient 40s ease infinite;
     font-weight:bold;
 }
 
