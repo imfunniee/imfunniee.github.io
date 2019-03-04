@@ -6,28 +6,29 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="description" content="yet another minimalist ui framework">
     <meta name="keywords" content="minimalist ui framework,ui framework, framework, css framework, new framework">
-    <meta name="author" content="imfunny">
+    <meta name="author" content="imfunny & community">
     <meta property="og:title" content="zeva.">
     <meta property="og:type" content="website">
     <meta property="og:description" content="yet another minimalist ui framework" />
     <meta property="og:url" content="https://imfunniee.github.io/zeva">
-    <meta name="theme-color" content="#000"/>
+    <meta name="theme-color" content="#000">
+    <link rel="icon" href="image/favicon.png">
     <title>zeva</title>
     <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="index.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/zeva-ui/zeva/dist/css/index.min.css">
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
-    <div id="bottom-video">
-        <video src="video.mp4" width="auto" height="105%" autoplay="autoplay" muted></video>
+    <div id="bottom-video" class="animated fadeIn" style="animation-delay: 0.8s;">
+        <video src="video/video.mp4" width="auto" height="105%" autoplay="autoplay" muted></video>
     </div>
-    <div id="top-part">
-        <div><b>zeva.</b></div>
-        <h2>yet another minimalist  ui framework</h2>
-        <a href="#start">
+    <div id="top-part" class="animated fadeIn" style="animation-delay: 1.1s;">
+        <div></div>
+        <h2 class="animated fadeIn" style="animation-delay: 1.2s;">yet another minimalist  ui framework</h2>
+        <a href="#start" class="animated fadeIn" style="animation-delay: 1.3s;">
             <button class="button filled rounded" style="margin:4vh auto;">Get Started</button>
         </a>
     </div>
@@ -52,13 +53,18 @@
             </p>
             <div class="box">
                 <h2>Download Zip</h2>
-                <a href="https://github.com/imfunniee/zeva/archive/master.zip">
+                <a href="https://github.com/zeva-ui/zeva/archive/master.zip">
                     <button class="button rounded bold"><i class="fas fa-download"></i> &nbsp; Download Zip</button>
                 </a>
             </div>
             <div class="box">
                 <h2>CDN</h2>
-                <div class="source">https://cdn.jsdelivr.net/gh/imfunniee/zeva/index.css</div>
+                <div class="source">https://cdn.jsdelivr.net/gh/zeva-ui/zeva/dist/css/index.css</div><br>
+                <div class="source">https://cdn.jsdelivr.net/gh/zeva-ui/zeva/dist/css/index.min.css</div>
+            </div>
+            <div class="box">
+                <h2>NPM</h2>
+                <div class="source">coming soon</div>
             </div>
             <div class="box">
                 <h2>Include this for using icons</h2>
@@ -170,7 +176,7 @@
             <h3>more components coming soon...</h3>
         </div>
     </div>
-    <footer><b>made on earth by a human</b></footer>
+    <footer><b>made on earth by humans</b></footer>
 <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
 <script type="text/javascript">
     var typed = new Typed('#is', {

@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 1000 1000">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-white);
+      }
+
+      .cls-2, .cls-5 {
+        fill: none;
+      }
+
+      .cls-2 {
+        stroke: #fff;
+        stroke-width: 45px;
+      }
+
+      .cls-3 {
+        fill: #fff;
+      }
+
+      .cls-4 {
+        stroke: none;
+      }
+
+      .cls-6 {
+        fill: rgba(255,255,255,0);
+      }
+    </style>
+    <clipPath id="clip-white">
+      <rect width="100%" height="100%"/>
+    </clipPath>
+  </defs>
+  <g id="white" class="cls-1">
+    <rect class="cls-6" width="100%" height="100%"/>
+    <g id="Rectangle_1" data-name="Rectangle 1" class="cls-2" transform="translate(656.201 156.479) rotate(40)">
+      <path class="cls-4" d="M202,0h.1a0,0,0,0,1,0,0V525.893a202,202,0,0,1-202,202H0a0,0,0,0,1,0,0V202A202,202,0,0,1,202,0Z"/>
+      <path class="cls-5" d="M162.105,22.5h0A17.5,17.5,0,0,1,179.6,40V565.788A139.605,139.605,0,0,1,40,705.393h0a17.5,17.5,0,0,1-17.5-17.5V162.105A139.605,139.605,0,0,1,162.105,22.5Z"/>
+    </g>
+    <rect id="Rectangle_8" data-name="Rectangle 8" class="cls-3" width="202.105" height="202.105" rx="100" transform="translate(188 240.163)"/>
+    <rect id="Rectangle_10" data-name="Rectangle 10" class="cls-3" width="202.105" height="202.105" rx="100" transform="translate(608.917 558.199)"/>
+  </g>
+</svg>

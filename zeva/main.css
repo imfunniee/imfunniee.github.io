@@ -2,15 +2,12 @@ body {
     max-width:100vw;
     overflow-x:hidden;
 }
-header {
-    margin:2% 5%;
-}
 #bottom-video {
     width:100vw;
     height:100vh;
     max-width:100vw;
-    overflow:hidden;
     max-height:100vh;
+    overflow:hidden !important;
 }
 #bottom-video video {
     margin:0px auto;
@@ -27,34 +24,36 @@ header {
     color:#fff;
     background-image:linear-gradient(0deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
 }
-#top-part div b{
-    font-size:180px;
+#top-part div {
+    width:50%;
+    height:50%;
     background-image:linear-gradient(-225deg, rgb(34, 130, 255) 0%, rgb(159, 89, 242) 29%, rgb(245, 47, 98) 67%, rgb(245, 194, 47) 100%);
-    -webkit-background-clip:text;
-    background-clip:text;
-    -webkit-text-fill-color: transparent;
+    -webkit-mask:  url("image/white.svg") no-repeat 50% 50%;
+    mask: url("image/white.svg")  no-repeat 50% 50%;
+    margin:0px auto;
     background-size:500% 500% !important;
     -webkit-animation: Gradient 40s ease infinite;
     -moz-animation: Gradient 40s ease infinite;
     -o-animation: Gradient 40s ease infinite;
     animation: Gradient 40s ease infinite;
 }
-
 #container-cool {
     width:100vw;
     padding:10vh 0px;
+    background:#000;
+    top:-10px;
+    position:relative;
+    max-width:100vw;
+    overflow: hidden;
 }
 
 .insider {
     width:80vw;
     padding:4vh 10vw;
     color:#fff;
+    max-width:100vw;
+    overflow: hidden;
 }
-.insider ~ .gist {
-    background-color:rgb(20,20,20) !important;
-    color:red;
-}
-
 #components a {
     background-image:linear-gradient(-225deg, rgb(34, 130, 255) 0%, rgb(159, 89, 242) 29%, rgb(245, 47, 98) 67%, rgb(245, 194, 47) 100%);
     -webkit-background-clip:text;
@@ -95,6 +94,7 @@ header {
     width:80%;
     padding:2% 5%;
     margin:1vh 0px;
+    word-wrap:break-word;
 }
 
 .source {
@@ -124,6 +124,29 @@ footer {
 
 ::-webkit-scrollbar-thumb {
     background:#fff; 
+}
+
+@media (max-width:800px) {
+    #top-part div {
+        width:80%;
+        height:50%;
+    }
+    .insider heading {
+        font-size:38px;
+    }
+    .insider {
+        width:90vw;
+        padding:4vh 5vw;
+    }
+    .insider p {
+        font-size:24px;
+        margin:4vh 0px !important;
+    }
+    .box {
+        width:90%;
+        padding:2% 3%;
+        margin:1vh 0px;
+    }
 }
 
 @-webkit-keyframes Gradient {
