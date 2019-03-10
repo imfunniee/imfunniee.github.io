@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
+
+body,html{
+padding:0px;
+margin:0px;
+background:#000;
+width:100vw;
+height:100vh;
+font-family: 'Josefin Sans', sans-serif;
+}
+header nav a img {
+    width:38px;
+    height:38px;
+    border-radius:50%;
+    position:relative;
+    bottom:-15px;
+}
+header nav a {
+    position:relative;
+    top:-15px;
+}
+#stats {
+    width:90vw;
+    padding:4vh 5vw;
+    padding-top:18vh;
+    color:#fff;
+}
+#stats h1 {
+    background-color: #ff822f;
+    background-image: linear-gradient(147deg, #ff822f 0%, #FF2525 74%);
+    -webkit-background-clip:text;
+    background-clip:text;
+    -webkit-text-fill-color: transparent;
+    background-size:500% 500% !important;
+    -webkit-animation: Gradient 40s ease infinite;
+    -moz-animation: Gradient 40s ease infinite;
+    -o-animation: Gradient 40s ease infinite;
+    animation: Gradient 40s ease infinite;
+}
+#container {
+    width:90vw;
+    padding:3vh 5vw;
+    color:#fff;
+}
+#container h2 {
+    display:inline-block;
+    margin-right:20px;
+    color:rgb(70, 70, 70);
+}
+#container h2:hover{
+    cursor: pointer;
+}
+.active {
+    color:#fff !important;
+}
+#container table {
+    width:100%;
+    margin:4vh 0px;
+    border-collapse: collapse;
+    font-size:18px;
+    font-weight:bold;
+    transition:0.4s ease-in-out;
+}
+#container table thead tr td {
+    background:rgb(10, 10, 10);
+    padding:5vh 2%;
+    width:19.75%;
+    transition:0.4s ease-in-out;
+}
+#container table tbody tr td {
+    padding:3vh 2%;
+    background:rgb(25, 25, 25);
+    width:19.75%;
+    border-bottom:4px solid #000;
+    border-top:4px solid #000;
+    transition:0.4s ease-in-out;
+}
+#container table tbody tr td summary {
+    transition:0.4s ease-in-out;
+}
+#container table tbody tr td summary:hover {
+    cursor: pointer;
+}
+#container table tbody tr td details:hover {
+    cursor: text;
+}
+summary:focus {
+    outline:none;
+}
+details:focus {
+    outline:none;
+}
+#for_orders {
+    display:none;
+}
+.delete {
+    transition:0.4s ease-in-out;
+}
+.delete:hover {
+    color:#FF2525;
+    cursor:pointer;
+}
