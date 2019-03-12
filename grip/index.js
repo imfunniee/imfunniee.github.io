@@ -12,7 +12,7 @@ window.onscroll = function(){
             $("#header").css("background","#000");
             $("#header").css("color","#fff");
         }
-        $("#header").css("box-shadow","0px 10px 30px rgba(0,0,0,0.06)");
+        $("#header").css("box-shadow","0px 10px 20px rgba(0,0,0,0.05)");
         $("#navigation a").hover(function(){
             $(this).css("border-bottom","2px solid rgb(255, 44, 90)");
         },function(){
