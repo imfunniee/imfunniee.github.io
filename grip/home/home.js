@@ -3,7 +3,7 @@ firebase.auth().onAuthStateChanged(function(user) {
         $("#userImg").attr("src","https://i.imgur.com/cntrc8m.png");
         $("#userImg").attr("title","imfunny");
     }else{
-        window.location.assign("/grip/login");
+        window.location.assign("/login");
          setTimeout(function(){
          $("#loading").addClass("animated fadeOut");
          setTimeout(function(){
