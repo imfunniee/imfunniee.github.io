@@ -1,6 +1,6 @@
 firebase.auth().onAuthStateChanged(function(user) {
     if(user){
-        window.location.assign("/home");
+        window.location.assign("grip/home");
     }else{
         setTimeout(function(){
             $("#text").addClass("animated fadeOut");
