@@ -14,9 +14,9 @@ function showweb(){
 function inlarge(url){
     $("#thischangesxD").attr("src",url);
     $("#inlarge").css("display","flex");
-    $("#img_container").addClass("animated bounceIn");
+    $("#img_container").addClass("animated fadeIn");
     setTimeout(function(){
-        $("#img_container").removeClass("animated bounceIn");
+        $("#img_container").removeClass("animated fadeIn");
     },800);
 }
 
@@ -38,21 +38,13 @@ setTimeout(function(){
 },3000);
 
 setTimeout(function(){
-    $("#leftThingy").addClass("animated slideOutLeft");
-    $("#RightThingy").addClass("animated slideOutRight");
+    $("#leftThingy").addClass("animated fadeOut");
+    $("#RightThingy").addClass("animated fadeOut");
     setTimeout(function(){
-        $("#leftThingy").removeClass("animated slideOutLeft");
-        $("#RightThingy").removeClass("animated slideOutRight");
+        $("#leftThingy").removeClass("animated fadeOut");
+        $("#RightThingy").removeClass("animated fadeOut");
         $("#leftThingy").css("display", "none");
         $("#RightThingy").css("display", "none");
         $("#loading").css("display", "none");
     },800);
 },3700);
-
-window.onscroll = function(){
-    if(document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-        document.body.style.backgroundSize = "150% auto";
-    }else{
-        document.body.style.backgroundSize = "100% auto";
-    }
-};
