@@ -216,7 +216,7 @@
     $.getJSON("./blog/blog.json", function(blog){
         for(var i = 0; i < blog.length; i++){
             $("#blogs").append(`
-            <a href="/blog/${blog[i].url_title}/" target="_blank">
+            <a href="/gitfolio/blog/${blog[i].url_title}/" target="_blank">
                 <section>
                     <img src="${blog[i].top_image}">
                     <div class="blog_container">
