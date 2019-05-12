@@ -2,26 +2,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Lorem ipsum dolor</title>
+    <title>my-first-blog</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="icon" href="https://avatars3.githubusercontent.com/u/36105478?v=4" type="image/png"><link rel="stylesheet" href="../../index.css"></head>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="../../index.css"></head>
 <body>
     <div id="loading">
         <div id="spinner"></div>
     </div>
-    <a href="https://imfunniee.github.io/gitfolio" class="go_back"><i class="fas fa-arrow-left"></i></a>
+    <a href="/" class="go_back"><i class="fas fa-arrow-left"></i></a>
     <div id="background"></div>
     <table id="profile_blog">
         <tbody><tr>
-            <td style="width:8vw;"><div id="profile_img_blog" style="background: url(https://avatars3.githubusercontent.com/u/36105478?v=4) center;"></div></td>
+            <td style="width:8vw;"><div id="profile_img_blog"></div></td>
             <td style="width:52vw;">
-                <div id="username_blog"><span>imfunny</span><br>@imfunniee<br><b id="blog_time"></b></div>
+                <div id="username_blog"></div>
             </td>
         </tr>
     </tbody></table>
     <div id="blog-display">
-        <h1 id="blog_title">Lorem ipsum dolor</h1>
+        <h1 id="blog_title">my-first-blog</h1>
         <h2 id="blog_sub_title">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
         <div id="blog">
             <img src="https://images.unsplash.com/photo-1553748024-d1b27fb3f960?w=1450">
@@ -49,6 +50,15 @@
         document.getElementById("loading").style.display = "none";
         },800);
     },1500);
+    $.getJSON("../../config.json", function(user){
+        var icon = document.createElement("link");
+        icon.setAttribute("rel", "icon");
+        icon.setAttribute("href", user[0].userimg);
+        icon.setAttribute("type", "image/png");
+        document.getElementsByTagName("head")[0].appendChild(icon);
+        document.getElementById("profile_img_blog").style.background = `url('${user[0].userimg}') center center`;
+        document.getElementById("username_blog").innerHTML = `<spanstyle="display:${user[0].name == null || !user[0].name ? 'none' : 'block'};">${user[0].name}</span><br>@${user[0].username}<b id="blog_time"></b>`;
+    });
     </script>
 
 </body></html>

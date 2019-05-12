@@ -14,12 +14,14 @@
     </div>
     <div id="profile">
         <div id="profile_img" style="background: url(https://avatars3.githubusercontent.com/u/36105478?v=4) center;"></div>
-        <div id="username"><span>imfunny</span><br>@imfunniee</div>
+        <div id="username"><span style="display:block;">imfunny</span>@imfunniee</div>
         <div id="userbio" style="display: block;">Frontend Developer &amp; UI/UX Designer</div>
         <div id="about">
+        <span style="display:none;"><i class="fas fa-users"></i> &nbsp; null</span>
         <span style="display:none;"><i class="fas fa-envelope"></i> &nbsp; null</span>
         <span style="display:block;"><i class="fas fa-link"></i> &nbsp; https://imfunniee.github.io/</span>
-        <span style="display:block;"><i class="fas fa-map-marker-alt"></i> &nbsp;&nbsp; Mars</span></div>
+        <span style="display:block;"><i class="fas fa-map-marker-alt"></i> &nbsp;&nbsp; Mars</span>
+        <span style="display:block;"><i class="fas fa-user-tie"></i> &nbsp;&nbsp; Available for hire</span></div>
     </div>
     <div id="display">
         <div id="work">
@@ -29,12 +31,12 @@
                     <section>
                         <div class="section_title">gitfolio</div>
                         <div class="about_section">
-                        about.me + medium but for every github User
+                        <img src="https://github.githubassets.com/images/icons/emoji/octocat.png?v8" class="emoji"> about.me + medium but for every github user
                         </div>
                         <div class="bottom_section">
-                            <span><i class="fas fa-code"></i>&nbsp; HTML</span>
-                            <span><i class="fas fa-star"></i>&nbsp; 1</span>
-                            <span><i class="fas fa-code-branch"></i>&nbsp; 1</span>
+                            <span><i class="fas fa-code"></i>&nbsp; JavaScript</span>
+                            <span><i class="fas fa-star"></i>&nbsp; 31</span>
+                            <span><i class="fas fa-code-branch"></i>&nbsp; 10</span>
                         </div>
                     </section>
                     </a>
@@ -42,11 +44,11 @@
                     <section>
                         <div class="section_title">gitark</div>
                         <div class="about_section">
-                        :octocat: Dark theme for Github
+                        <img src="https://github.githubassets.com/images/icons/emoji/octocat.png?v8" class="emoji"> Dark theme for Github
                         </div>
                         <div class="bottom_section">
                             <span><i class="fas fa-code"></i>&nbsp; CSS</span>
-                            <span><i class="fas fa-star"></i>&nbsp; 91</span>
+                            <span><i class="fas fa-star"></i>&nbsp; 92</span>
                             <span><i class="fas fa-code-branch"></i>&nbsp; 9</span>
                         </div>
                     </section>
@@ -72,7 +74,7 @@
                         </div>
                         <div class="bottom_section">
                             <span><i class="fas fa-code"></i>&nbsp; JavaScript</span>
-                            <span><i class="fas fa-star"></i>&nbsp; 0</span>
+                            <span><i class="fas fa-star"></i>&nbsp; 2</span>
                             <span><i class="fas fa-code-branch"></i>&nbsp; 0</span>
                         </div>
                     </section>
@@ -188,14 +190,14 @@
                         👨‍💻 personal portfolio website and projects
                         </div>
                         <div class="bottom_section">
-                            <span><i class="fas fa-code"></i>&nbsp; JavaScript</span>
-                            <span><i class="fas fa-star"></i>&nbsp; 3</span>
+                            <span><i class="fas fa-code"></i>&nbsp; HTML</span>
+                            <span><i class="fas fa-star"></i>&nbsp; 4</span>
                             <span><i class="fas fa-code-branch"></i>&nbsp; 1</span>
                         </div>
                     </section>
                     </a></div>
         </div>
-        <div id="blog_section" >
+        <div id="blog_section">
             <h1>Blog.</h1>
             <div id="blogs"></div>
         </div>
@@ -216,7 +218,7 @@
     $.getJSON("./blog/blog.json", function(blog){
         for(var i = 0; i < blog.length; i++){
             $("#blogs").append(`
-            <a href="/gitfolio/blog/${blog[i].url_title}/" target="_blank">
+            <a href="/blog/${blog[i].url_title}/" target="_blank">
                 <section>
                     <img src="${blog[i].top_image}">
                     <div class="blog_container">
