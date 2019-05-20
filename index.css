@@ -3,7 +3,7 @@ body{
     margin:0px;
     font-family: 'Comfortaa', cursive;
     font-weight:bold;
-    background:url("https://images.unsplash.com/photo-1486546910464-ec8e45c4a137?w=1651&q=80") center center fixed;
+    background:url("https://images.unsplash.com/photo-1550684656-96eda9e5c632?&w=1634") center center fixed;
     background-size:cover !important;
     width:100vw;
     height:100vh;
@@ -117,7 +117,7 @@ body{
 }
 
 #tagline h1 {
-    background:url("https://images.unsplash.com/photo-1486546910464-ec8e45c4a137?w=1651&q=80") center center;
+    background:url("https://images.unsplash.com/photo-1550684656-96eda9e5c632?&w=1634") center center;
     -webkit-background-clip:text;
     background-clip:text;
     -webkit-text-fill-color: transparent;
@@ -135,7 +135,7 @@ body{
     font-size:20px;
 }
 
-#about,#work,#contact {
+#about, #work, #contact {
     padding:2vh 0px;
 }
 
@@ -151,7 +151,7 @@ body{
 }
 #portfolio div p{
     font-size:55px;
-    background:url("https://images.unsplash.com/photo-1486546910464-ec8e45c4a137?w=1651&q=80") center center;
+    background:url("https://images.unsplash.com/photo-1550684656-96eda9e5c632?&w=1634") center center;
     -webkit-background-clip:text;
     background-clip:text;
     -webkit-text-fill-color: transparent;
@@ -162,6 +162,11 @@ body{
     padding:8px 30px;
     padding-left:0px !important;
 }
+
+#web {
+    columns:2;
+}
+
 .project {
     width:515px;
     height:auto;
