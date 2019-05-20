@@ -50,7 +50,7 @@
         document.getElementById("loading").style.display = "none";
         },800);
     },1500);
-    $.getJSON(".config.json", function(user){
+    $.getJSON("./config.json", function(user){
         var icon = document.createElement("link");
         icon.setAttribute("rel", "icon");
         icon.setAttribute("href", user[0].userimg);
