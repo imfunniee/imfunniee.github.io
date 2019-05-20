@@ -1,11 +1,11 @@
 [
  {
-  "username": null,
-  "name": null,
-  "userimg": null,
-  "sort": null,
-  "order": null,
-  "includeFork": null,
-  "theme": "light.css"
+  "username": "imfunniee",
+  "name": "imfunny",
+  "userimg": "https://avatars3.githubusercontent.com/u/36105478?v=4",
+  "sort": "star",
+  "order": "desc",
+  "includeFork": true,
+  "theme": "dark.css"
  }
 ]
