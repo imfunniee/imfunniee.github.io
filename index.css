@@ -158,6 +158,7 @@ body{
     background-size:cover !important;
     font-family: 'Poppins', sans-serif;
 }
+
 #about table tr td {
     padding:8px 30px;
     padding-left:0px !important;
@@ -307,9 +308,11 @@ body{
     #header {
         width:94%;
         padding:10% 3%;
+        position: relative;
+        background:#fff;
     }
     #title {
-        font-size:30px;
+        font-size:24px;
         font-family: 'Comfortaa', cursive;
         margin:0px;
     }
@@ -321,25 +324,32 @@ body{
         border-radius:0px;
     }
     #middle {
-        width:100%;
+        width:88%;
         border-radius:0px;
-        height:100vh;
+        height:auto;
         border-radius:0px;
+        min-height:63vh;
+    }
+    #tagline h1 {
+        font-size:40px;
     }
     #tagline {
-        width:90%;
-        font-size:34px;
+        width:98%;
+        font-size:29px;
+        text-align:center;
     }
     #wtf {
-        margin:0px 6vw !important;
+        margin:0px 4vw !important;
     }
     #about {
         text-align:left;
     }
     #about table tr td {
-        padding:8px 10px !important;
-        margin:10px 5px;
+        padding:8px 0px !important;
+        margin:10px 0px;
+        margin-right:12px;
         display:inline-block;
+        font-size:17px;
     }
     #details {
         text-align:center;
@@ -366,6 +376,9 @@ body{
         width:100%;
         text-align:left;
     }
+    #portfolio div p{
+        font-size:40px;
+    }
     .project button {
         font-size:14px;
         padding:10px 25px;
@@ -379,6 +392,12 @@ body{
     }
     #work h1 span{
         font-size:24px;
+    }
+    #web {
+        columns:1;
+    }
+    #about h2 {
+        font-size:22px;
     }
 }
 #in_mobile {
