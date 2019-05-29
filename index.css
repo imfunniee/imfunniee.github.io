@@ -227,25 +227,25 @@ body{
     background:#000; 
 }
 
-#details {
+.details {
     width:100%;
     text-align:left;
 }
 
-#details a {
-    font-size:24px;
+.details a {
+    font-size:20px;
     color:#282828;
     margin-right:8vw;
-    margin-left:5px;
+    margin-left:0px;
     border-radius:50%;
     transition:0.4s ease-in-out;
 }
 
-#details a:hover {
+.details a:hover {
     color:#bbbbbb;
 }
 
-#design .project:hover {
+.design .project:hover {
     cursor: pointer;
 }
 
