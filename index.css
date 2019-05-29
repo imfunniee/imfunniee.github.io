@@ -351,10 +351,10 @@ body{
         display:inline-block;
         font-size:17px;
     }
-    #details {
+    .details {
         text-align:center;
     }
-    #details a {
+    .details a {
         font-size:20px;
         margin:0px 3vw;
         padding:14px;
