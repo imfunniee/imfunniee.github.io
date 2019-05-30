@@ -404,3 +404,64 @@ body{
     margin:4vh 0px;
     margin-top:8vh;
 }
+
+#mailing {
+    width:auto;
+    height:auto;
+    padding:2vh 3vw;
+    padding-bottom:3.5vh;
+    border-radius:5px;
+    background:linear-gradient(0deg, rgba(0,0,0,0.4), rgba(0,0,0,0.4)),url("https://images.unsplash.com/photo-1550684656-96eda9e5c632?&w=1634") center center;
+    background-repeat: no-repeat;
+    background-size:cover;
+    position:fixed;
+    bottom:0;
+    right:0;
+    margin:6vh 4vw;
+    transition:0.4s ease-in-out;
+    box-shadow:0px 6px 40px rgba(0, 0, 0, 0.2);
+    color:#fff;
+    display:none;
+}
+
+#mailing input {
+    width:96%;
+    padding:5px 8px;
+    border:0px;
+    border-bottom:2px solid rgba(255, 255, 255, 0.6);
+    font-family: 'Poppins', sans-serif;
+    margin-bottom:2vh;
+    font-size:15px;
+    transition:0.4s ease-in-out;
+    background:transparent;
+    font-weight:bold;
+    color:#fff;
+}
+
+#mailing input:focus{
+    border-bottom:2px solid rgba(255, 255, 255, 1);
+}
+
+#mailing button {
+    width:20%;
+    padding:8px 8px;
+    border:0px;
+    color:#282828;
+    border-radius:5px;
+    background:#fff;
+    font-family: 'Poppins', sans-serif;
+    font-weight:bold;
+    margin-top:1vh;
+}
+
+#mailing button:hover{
+    cursor: pointer;
+}
+
+::placeholder {
+    color: #fff;
+}
+
+input,button:focus {
+    outline:none;
+}
