@@ -84,7 +84,7 @@ window.addEventListener('load', function() {
     setTimeout(function(){
         $("#mailing").removeClass("animated fadeInRight");
       },800);
-    },20000);
+    },50000);
 }, false);
 
 $("#btn1").click(function(){
