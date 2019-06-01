@@ -15,7 +15,7 @@ body {
 #background {
     width:100vw;
     height:100vh;
-    background:linear-gradient(0deg,rgba(14,14,14,0.6),rgba(14,14,14,0.6)),url("https://images.unsplash.com/photo-1450198342040-c32e6d1ef2e4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1189&q=80") center center;
+    background:linear-gradient(0deg,rgba(14,14,14,0.6),rgba(14,14,14,0.6)),url("https://images.unsplash.com/photo-1482329833197-916d32bdae74?w=1983") center center;
     background-size:cover;
     background-repeat:no-repeat;
     z-index:-2;
@@ -26,7 +26,7 @@ body {
 #days {
     width:360px;
     height:360px;
-    background:url("https://images.unsplash.com/photo-1450198342040-c32e6d1ef2e4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1189&q=80") center center;
+    background:url("https://images.unsplash.com/photo-1482329833197-916d32bdae74?w=1983") center center;
     background-size:cover;
     background-repeat:no-repeat;
     border-radius:50%;
@@ -95,25 +95,6 @@ body {
 	align-items: center;
 }
 
-#spinner {
-	animation: rotate 1s infinite linear;
-	width: 60px;
-	height: 60px;
-	border: 14px solid #fff;
-	border-bottom: 14px solid rgb(14, 14, 14);
-	border-radius: 100px;
-	margin: 0;
-}
-
-@keyframes rotate {
-	0% {
-		transform: rotate(0deg);
-	}
-	100% {
-		transform: rotate(360deg);
-	}
-}
-
 @media (max-width : 600px){
     #time-container table tr td div {
         font-size:18px !important;
@@ -131,4 +112,64 @@ body {
         text-align:center;
         width:10%;
     }
+}
+#mailing {
+    width:auto;
+    height:auto;
+    padding:2vh 3vw;
+    padding-bottom:3.5vh;
+    border-radius:5px;
+    background:linear-gradient(0deg, rgba(0,0,0,0.6), rgba(0,0,0,0.6)),url("https://images.unsplash.com/photo-1550684656-96eda9e5c632?&w=1634") center center;
+    background-repeat: no-repeat;
+    background-size:cover;
+    position:fixed;
+    bottom:0;
+    right:0;
+    margin:6vh 4vw;
+    transition:0.4s ease-in-out;
+    box-shadow:0px 6px 40px rgba(0, 0, 0, 0.2);
+    color:#fff;
+    display:none;
+}
+
+#mailing input {
+    width:96%;
+    padding:5px 8px;
+    border:0px;
+    border-bottom:2px solid rgba(255, 255, 255, 0.6);
+    font-family: 'Poppins', sans-serif;
+    margin-bottom:2vh;
+    font-size:15px;
+    transition:0.4s ease-in-out;
+    background:transparent;
+    font-weight:bold;
+    color:#fff;
+}
+
+#mailing input:focus{
+    border-bottom:2px solid rgba(255, 255, 255, 1);
+}
+
+#mailing button {
+    width:20%;
+    padding:8px 8px;
+    border:0px;
+    color:#282828;
+    border-radius:5px;
+    background:#fff;
+    font-family: 'Poppins', sans-serif;
+    font-weight:bold;
+    margin-top:1vh;
+}
+
+#mailing button:hover{
+    cursor: pointer;
+}
+
+::placeholder {
+    color: #fff;
+}
+
+input,button:focus {
+    outline:none;
 }
