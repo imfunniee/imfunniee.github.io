@@ -26,7 +26,7 @@
      <textarea id="yourmessage" rows="4"></textarea><br><button id="send">send</button>
     </label>
      <p id="idkifthisthingisrequiredbutitisiguess">
-        made on earth by a human <a href="how.html">how does this thing works??</a>
+        made by imfunny with love and a keyboard <a href="how.html">how does this thing works??</a>
      </p>
     </div>
     <div id="main-main" class="animated fadeIn" style="display:none;">
@@ -50,7 +50,6 @@
     peer.on('signal', function(data){
         document.getElementById("your_id").value = JSON.stringify(data);
     });
-
     document.getElementById("connect").addEventListener('click',function(){
         var otherid = JSON.parse(document.getElementById("other_id").value);
         peer.signal(otherid);
@@ -67,7 +66,6 @@
     peer.on('data', function(data){
         document.getElementById("messages").innerHTML += data + '<br>';
     });
-
     peer.on('stream', function(stream){
         var video = document.getElementById('video');
         video.srcObject = stream;
@@ -78,7 +76,6 @@
 .catch(function(err) {
     console.log(err);
 });
-
     </script>
 </body>
 </html>
