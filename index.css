@@ -166,12 +166,13 @@ body{
 
 #web {
     columns:2;
+    column-gap:3vw;
 }
 
 .project {
-    width:515px;
+    width:90%;
     height:auto;
-    margin:3vh 25px;
+    margin:3vh 0px;
     display:inline-block;
     padding:4vh 28px;
     color:#282828;
@@ -298,6 +299,20 @@ body{
     border-radius:8px;
     padding:0px;
     margin:0px;
+}
+
+#design {
+    columns:3;
+    column-gap:4vw;
+}
+
+@media (min-width: 2000px){
+    #web {
+        columns:3;
+    }
+    #design {
+        columns:3;
+    }
 }
 
 @media (max-width: 980px){
