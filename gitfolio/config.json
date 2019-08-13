@@ -6,6 +6,13 @@
   "sort": "star",
   "order": "desc",
   "includeFork": true,
-  "theme": "dark.css"
+  "theme": "dark.css",
+  "types": [
+   "owner"
+  ],
+  "twitter": "imfunnieee",
+  "linkedin": "imfunniee",
+  "medium": null,
+  "dribbble": "imfunniee"
  }
 ]
