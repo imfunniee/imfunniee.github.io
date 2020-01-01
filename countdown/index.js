@@ -70,3 +70,8 @@ var realSecondPercentage = 1 - Number(secondPerc)
 circle4.animate(realSecondPercentage);
 
 },1000);
+
+
+window.addEventListener('load', function() {
+  NProgress.done();
+});
