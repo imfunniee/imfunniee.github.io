@@ -1,4 +1,4 @@
-var db = firebase.firestore();
+
 var circle = new ProgressBar.Circle(`#days`, {
     color: "#900C3F",
     trailColor: "transparent",
