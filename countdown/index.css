@@ -15,7 +15,7 @@ body {
 #background {
     width:100vw;
     height:100vh;
-    background:linear-gradient(0deg,rgba(14,14,14,0.6),rgba(14,14,14,0.6)),url("https://images.unsplash.com/photo-1482329833197-916d32bdae74?w=1000") center center;
+    background:linear-gradient(0deg,rgba(14,14,14,0.6),rgba(14,14,14,0.6)),url("https://images.unsplash.com/photo-1608096299230-81c7b43d5dfc?w=1500") center center;
     background-size:cover;
     background-repeat:no-repeat;
     z-index:-2;
@@ -26,7 +26,7 @@ body {
 #days {
     width:360px;
     height:360px;
-    background:url("https://images.unsplash.com/photo-1482329833197-916d32bdae74?w=360") center center;
+    background: url("https://images.unsplash.com/photo-1608096299230-81c7b43d5dfc?w=1500") center center;
     background-size:cover;
     background-repeat:no-repeat;
     border-radius:50%;
