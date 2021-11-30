@@ -27,8 +27,8 @@ var circle4 = new ProgressBar.Circle(`#seconds`, {
     duration: 1400,
     strokeWidth: 6,
 });
-var countDownDate = new Date("Dec 24, 2021 00:00:00").getTime();
-var start = new Date('Dec 24, 2020 00:00:00').getTime();
+var countDownDate = new Date("Dec 25, 2021 00:00:00").getTime();
+var start = new Date('Dec 25, 2020 00:00:00').getTime();
 var x = setInterval(function() {
     var now = new Date().getTime();
     var distance = countDownDate - now;
