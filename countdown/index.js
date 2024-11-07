@@ -27,7 +27,7 @@ var circle4 = new ProgressBar.Circle(`#seconds`, {
     duration: 1400,
     strokeWidth: 6,
 });
-var year = new Date().getYear()
+var year = new Date().getFullYear();
 var countDownDate = new Date(`Dec 25, ${year} 00:00:00`).getTime();
 var start = new Date(`Dec 25, ${year-1} 00:00:00`).getTime();
 var x = setInterval(function() {
